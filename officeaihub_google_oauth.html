@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficeAIHub - The Best AI Tools for Office & Writing</title>
+    <meta name="description" content="Discover the most suitable AI tools at OfficeAIHub to enhance writing, design, copywriting, and office efficiency. We carefully curated AI tools with affiliate support to help you become more efficient and professional.">
+    <meta name="keywords" content="AI tools, writing AI, office automation, AI writing, copywriting, SEO optimization, productivity AI tools, social media AI tools, ChatGPT alternative">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='20' width='60' height='70' rx='8' fill='none' stroke='%23666' stroke-width='3'/%3E%3Crect x='25' y='10' width='20' height='8' rx='2' fill='%23666'/%3E%3Cline x1='20' y1='35' x2='50' y2='35' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='45' x2='40' y2='45' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='55' x2='35' y2='55' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='65' x2='45' y2='65' stroke='%23ccc' stroke-width='2'/%3E%3Cpath d='M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z' fill='%23666'/%3E%3Crect x='55' y='40' width='35' height='25' rx='5' fill='none' stroke='%2300C896' stroke-width='3'/%3E%3Ctext x='72.5' y='58' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%2300C896'%3EAI%3C/text%3E%3C/svg%3E">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="OfficeAIHub - AI Tools Platform for Enhanced Workplace Efficiency" />
+    <meta property="og:description" content="Discover the most powerful writing, design, and office AI tools to help you complete every task more efficiently." />
+    <meta property="og:image" content="https://officeaihub.com/assets/cover.jpg" />
+    <meta property="og:url" content="https://www.officeaihub.com" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Dark mode configuration
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .dark {
+            color-scheme: dark;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Google 登录按钮样式 */
+        .google-button {
+            background: #ffffff;
+            border: 2px solid #dadce0;
+            border-radius: 8px;
+            color: #3c4043;
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            padding: 12px 16px;
+            text-align: center;
+            transition: all 0.2s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .google-button:hover {
+            background: #f8f9fa;
+            border-color: #d2d3d4;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        }
+        
+        .google-button:active {
+            background: #f1f3f4;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+        }
+        
+        .google-button:disabled {
+            background: #f8f9fa;
+            border-color: #f8f9fa;
+            color: #5f6368;
+            cursor: not-allowed;
+        }
+        
+        .google-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .dark .google-button {
+            background: #2d3748;
+            border-color: #4a5568;
+            color: #e2e8f0;
+        }
+        
+        .dark .google-button:hover {
+            background: #3e4a5c;
+            border-color: #5a6b7d;
+        }
+        
+        .dark .google-button:active {
+            background: #374151;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+        
+        .dark .divider::before,
+        .dark .divider::after {
+            background: #4b5563;
+        }
+        
+        .divider:not(:empty)::before {
+            margin-right: 16px;
+        }
+        
+        .divider:not(:empty)::after {
+            margin-left: 16px;
+        }
+        
+        .tool-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .dark .tool-card {
+            background: #1f2937;
+            border-color: #374151;
+        }
+        
+        .tool-card:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+        }
+        
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .tag.free {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .tag.paid {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 640px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .line-clamp-1 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        
+        .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .screenshot-hover {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Modal Styles */
+        #authModal {
+            backdrop-filter: blur(4px);
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        #authModal.hidden {
+            display: none;
+        }
+        
+        #modalContent {
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Form Styles */
+        .modal-input {
+            transition: all 0.2s ease;
+        }
+        
+        .modal-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        /* Button Hover Effects */
+        .modal-button {
+            transition: all 0.2s ease;
+        }
+        
+        .modal-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* User Status Styles */
+        .user-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .dark .error-message {
+            color: #f87171;
+            background: #1f1f1f;
+            border-color: #374151;
+        }
+        
+        .success-message {
+            color: #10b981;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .dark .success-message {
+            color: #34d399;
+            background: #1f1f1f;
+            border-color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = localStorage.getItem('darkMode') === 'true' || false; $watch('darkMode', val => { localStorage.setItem('darkMode', val); if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- Logo Icon -->
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</h1>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- User Status Section -->
+                    <div id="userStatus" class="flex items-center space-x-4">
+                        <!-- Guest Status (default) -->
+                        <div id="guestStatus" class="flex items-center space-x-4">
+                            <button 
+                                onclick="handleSignIn()"
+                                class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors font-medium"
+                            >
+                                Sign In
+                            </button>
+                            
+                            <button 
+                                onclick="handleSignUp()"
+                                class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors font-medium"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                        
+                        <!-- Logged In Status (hidden by default) -->
+                        <div id="loggedInStatus" class="hidden flex items-center space-x-4">
+                            <div class="user-status">
+                                <div class="user-avatar" id="userAvatar"></div>
+                                <span id="userEmail" class="text-sm text-gray-700 dark:text-gray-300"></span>
+                            </div>
+                            <button 
+                                onclick="handleLogout()"
+                                class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-red-600 transition-colors font-medium"
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Toggle dark mode"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button and Dark Mode -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <!-- Mobile Dark Mode Toggle -->
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                    
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 pt-2 pb-3 space-y-2">
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-2">
+                    <div id="mobileGuestStatus">
+                        <button 
+                            onclick="handleSignIn()"
+                            class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600"
+                        >
+                            Sign In
+                        </button>
+                        <button 
+                            onclick="handleSignUp()"
+                            class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600"
+                        >
+                            Sign Up
+                        </button>
+                    </div>
+                    <div id="mobileLoggedInStatus" class="hidden">
+                        <div class="px-3 py-2 flex items-center space-x-3">
+                            <div class="user-avatar" id="mobileUserAvatar"></div>
+                            <span id="mobileUserEmail" class="text-sm text-gray-700 dark:text-gray-300"></span>
+                        </div>
+                        <button 
+                            onclick="handleLogout()"
+                            class="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-red-600"
+                        >
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Navigation -->
+    <section class="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-4">
+                <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+                    <a href="#featured" class="flex items-center justify-center space-x-2 px-4 py-3 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-all cursor-pointer">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <span class="font-medium text-sm">Featured</span>
+                    </a>
+                    <a href="#writing" class="flex items-center justify-center space-x-2 px-4 py-3 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full hover:bg-purple-200 dark:hover:bg-purple-800 transition-all cursor-pointer">
+                        <i class="fas fa-pen-fancy text-purple-500"></i>
+                        <span class="font-medium text-sm">Writing</span>
+                    </a>
+                    <a href="#design" class="flex items-center justify-center space-x-2 px-4 py-3 bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-300 rounded-full hover:bg-pink-200 dark:hover:bg-pink-800 transition-all cursor-pointer">
+                        <i class="fas fa-palette text-pink-500"></i>
+                        <span class="font-medium text-sm">Design</span>
+                    </a>
+                    <a href="#marketing" class="flex items-center justify-center space-x-2 px-4 py-3 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-full hover:bg-green-200 dark:hover:bg-green-800 transition-all cursor-pointer">
+                        <i class="fas fa-chart-line text-green-500"></i>
+                        <span class="font-medium text-sm">Marketing</span>
+                    </a>
+                    <a href="#office" class="flex items-center justify-center space-x-2 px-4 py-3 bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 rounded-full hover:bg-orange-200 dark:hover:bg-orange-800 transition-all cursor-pointer">
+                        <i class="fas fa-cogs text-orange-500"></i>
+                        <span class="font-medium text-sm">Office</span>
+                    </a>
+                    <a href="#trending" class="flex items-center justify-center space-x-2 px-4 py-3 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded-full hover:bg-red-200 dark:hover:bg-red-800 transition-all cursor-pointer">
+                        <i class="fas fa-fire text-red-500"></i>
+                        <span class="font-medium text-sm">Trending</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-50 dark:bg-gray-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                Discover the Most Powerful
+                <span class="text-blue-600">AI Tools</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                AI tool navigation platform to enhance workplace efficiency, covering writing, design, office automation, marketing and more
+            </p>
+            
+            <!-- Enhanced Search Box -->
+            <div class="w-full max-w-xl mx-auto mb-8">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="w-full px-4 py-3 pr-16 border border-gray-300 dark:border-gray-600 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+                        placeholder="Enter the task you want to complete, like: write weekly report, clone voice, generate PPT"
+                        onkeydown="handleSearchKeydown(event)"
+                    />
+                    <button
+                        type="submit"
+                        onclick="performSearch()"
+                        class="absolute right-1 top-1/2 -translate-y-1/2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base rounded-full transition-colors"
+                    >
+                        Search
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Hot Search Bar -->
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full font-medium">Hot Search:</span>
+                    <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition-colors" onclick="searchHotKeyword('ChatGPT')">ChatGPT</span>
+                    <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition-colors" onclick="searchHotKeyword('Writing Assistant')">Writing Assistant</span>
+                    <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition-colors" onclick="searchHotKeyword('Image Generation')">Image Generation</span>
+                    <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition-colors" onclick="searchHotKeyword('PPT Maker')">PPT Maker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tools Section -->
+    <section id="featured" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Featured Tools</h3>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">Featured</button>
+                    <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Most Liked</button>
+                    <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Trending</button>
+                </div>
+            </div>
+            <div class="tools-grid" id="featuredTools">
+                <!-- Tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Tools Section -->
+    <section id="writing" class="py-16 dark:bg-gray-900">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Writing Tools</h3>
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-700">View All →</a>
+            </div>
+            <div class="tools-grid" id="writingTools">
+                <!-- Writing tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Tools Section -->
+    <section id="design" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Design Tools</h3>
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-700">View All →</a>
+            </div>
+            <div class="tools-grid" id="designTools">
+                <!-- Design tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Tools Section -->
+    <section id="marketing" class="py-16 dark:bg-gray-900">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Marketing Tools</h3>
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-700">View All →</a>
+            </div>
+            <div class="tools-grid" id="marketingTools">
+                <!-- Marketing tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Tools Section -->
+    <section id="office" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Office Automation</h3>
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-700">View All →</a>
+            </div>
+            <div class="tools-grid" id="officeTools">
+                <!-- Office tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Tools by Scenario Section -->
+    <section id="scenarios" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Writing & Content Creation -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="text-2xl">✍️</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Writing & Content Creation</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Professional writing tools for articles, emails, and marketing content</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="flex space-x-4 overflow-x-auto pb-4">
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.jasper.ai', '_blank')" title="Visit Jasper AI">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=jasper.ai&sz=32" alt="Jasper AI" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400">Jasper AI</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Jasper is an AI-powered content generation platform that helps marketers create blog posts, emails, and ad copy with advanced language models.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.grammarly.com', '_blank')" title="Visit Grammarly">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=32" alt="Grammarly" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400">Grammarly</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Grammarly is an AI writing assistant that checks grammar, spelling, and style to help you write clear and professional content across all platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.notion.so', '_blank')" title="Visit Notion AI">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=notion.so&sz=32" alt="Notion AI" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400">Notion AI</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Notion AI is an integrated writing assistant that helps you generate, edit, and organize content within your workspace for maximum productivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.copy.ai', '_blank')" title="Visit Copy.ai">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=copy.ai&sz=32" alt="Copy.ai" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400">Copy.ai</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Copy.ai is an AI copywriting tool that generates marketing content, social media posts, and sales copy to boost your conversion rates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & Creative Tools -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="text-2xl">🎨</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Design & Creative Tools</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">AI-powered image generation and graphic design tools for creative professionals</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="flex space-x-4 overflow-x-auto pb-4">
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.midjourney.com', '_blank')" title="Visit Midjourney">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=32" alt="Midjourney" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Midjourney</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Midjourney is an AI image generator that creates stunning artwork and visuals from text descriptions with incredible detail and artistic style.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://www.canva.com', '_blank')" title="Visit Canva AI">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=32" alt="Canva AI" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Canva AI</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Canva AI is an enhanced graphic design platform that uses AI to create presentations, social media graphics, and marketing materials effortlessly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://openai.com/dall-e-3', '_blank')" title="Visit DALL-E 3">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=32" alt="DALL-E 3" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">DALL-E 3</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">DALL-E 3 is OpenAI's advanced image generation model that creates highly detailed and accurate images from natural language descriptions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://firefly.adobe.com', '_blank')" title="Visit Adobe Firefly">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=32" alt="Adobe Firefly" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Adobe Firefly</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Adobe Firefly is Adobe's AI creative suite that generates images, graphics, and visual effects with professional-grade quality and precision.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Automation -->
+            <div class="mb-12">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="text-2xl">📊</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Office Automation</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Smart tools for presentations, scheduling, and workflow automation to boost productivity</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="flex space-x-4 overflow-x-auto pb-4">
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://tome.app', '_blank')" title="Visit Tome">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=tome.app&sz=32" alt="Tome" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Tome</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Tome is an AI presentation maker that creates professional slides and storytelling presentations from simple text prompts and outlines.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://otter.ai', '_blank')" title="Visit Otter.ai">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=otter.ai&sz=32" alt="Otter.ai" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Otter.ai</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Otter.ai is an AI meeting assistant that automatically transcribes conversations, generates summaries, and captures action items from meetings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://zapier.com', '_blank')" title="Visit Zapier AI">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=zapier.com&sz=32" alt="Zapier AI" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Zapier AI</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Zapier AI automates workflows between different apps and services, connecting your tools to work together seamlessly without manual intervention.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-500 transition-all cursor-pointer" onclick="window.open('https://calendly.com', '_blank')" title="Visit Calendly AI">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-gray-200 dark:border-gray-600">
+                                    <img src="https://www.google.com/s2/favicons?domain=calendly.com&sz=32" alt="Calendly AI" class="w-8 h-8 rounded">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Calendly AI</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Calendly AI enhances scheduling with smart availability detection, automatic meeting preparation, and intelligent calendar management features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h3 class="text-xl font-bold">OfficeAIHub</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Discover the most powerful AI tools to enhance your workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
+                        <li><a href="#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
+                        <li><a href="#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
+                        <li><a href="#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 OfficeAIHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div id="modalContent" class="relative">
+            <!-- Modal content will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Supabase 配置
+        const SUPABASE_URL = 'https://ftbwofwxqvezjogiexme.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0Ym93Znh2cXZlempvZ2lleG1lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY0NjQ3MjMsImV4cCI6MjA1MjA0MDcyM30.fMOUqgOJqpWfN8tQD7W7oEzG8v4LjGfUVSQaUdnqOI8';
+        
+        // 初始化 Supabase 客户端
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        
+        // 当前用户状态
+        let currentUser = null;
+
+        // AI Tools Database
+        const aiTools = [
+            // Featured Tools
+            {
+                name: "Jasper AI",
+                category: "Content Generation",
+                description: "AI tool for marketing copywriting, blog content, and emails.",
+                tags: ["copywriting", "blog", "email", "marketing"],
+                rating: 4.8,
+                url: "https://www.jasper.ai",
+                color: "red",
+                section: "featured"
+            },
+            {
+                name: "Grammarly",
+                category: "Writing Tools",
+                description: "AI tool for grammar checking and writing enhancement.",
+                tags: ["grammar", "proofreading", "writing assistant"],
+                rating: 4.6,
+                url: "https://www.grammarly.com",
+                color: "green",
+                section: "featured"
+            },
+            {
+                name: "ChatGPT",
+                category: "AI Assistant",
+                description: "Conversational AI for writing, coding, and problem-solving.",
+                tags: ["chatbot", "writing", "coding", "assistant"],
+                rating: 4.9,
+                url: "https://chat.openai.com",
+                color: "blue",
+                section: "featured"
+            },
+
+            // Writing Tools
+            {
+                name: "Notion AI",
+                category: "Writing Tools",
+                description: "AI writing assistant integrated with workspace management.",
+                tags: ["productivity", "workspace", "writing", "organization"],
+                rating: 4.4,
+                url: "https://www.notion.so",
+                color: "gray",
+                section: "writing"
+            },
+            {
+                name: "Copy.ai",
+                category: "Writing Tools",
+                description: "AI copywriting tool for marketing content and social media.",
+                tags: ["copywriting", "marketing", "social media", "content"],
+                rating: 4.3,
+                url: "https://www.copy.ai",
+                color: "orange",
+                section: "writing"
+            },
+            {
+                name: "Writesonic",
+                category: "Writing Tools",
+                description: "AI writer for articles, blogs, ads, and marketing copy.",
+                tags: ["writing", "articles", "blogs", "ads"],
+                rating: 4.2,
+                url: "https://writesonic.com",
+                color: "purple",
+                section: "writing"
+            },
+
+            // Design Tools
+            {
+                name: "Midjourney",
+                category: "Design Tools",
+                description: "AI-powered image generation from text prompts.",
+                tags: ["image generation", "art", "design", "creative"],
+                rating: 4.7,
+                url: "https://www.midjourney.com",
+                color: "purple",
+                section: "design"
+            },
+            {
+                name: "Canva AI",
+                category: "Design Tools",
+                description: "AI-enhanced graphic design platform for presentations and social media.",
+                tags: ["design", "presentation", "social media", "graphics"],
+                rating: 4.5,
+                url: "https://www.canva.com",
+                color: "pink",
+                section: "design"
+            },
+            {
+                name: "DALL-E 3",
+                category: "Design Tools",
+                description: "Advanced AI image generator by OpenAI with incredible detail.",
+                tags: ["image generation", "AI art", "creative", "detailed"],
+                rating: 4.8,
+                url: "https://openai.com/dall-e-3",
+                color: "green",
+                section: "design"
+            },
+
+            // Marketing Tools
+            {
+                name: "HubSpot AI",
+                category: "Marketing Tools",
+                description: "AI-powered marketing automation and CRM platform.",
+                tags: ["CRM", "automation", "lead generation", "analytics"],
+                rating: 4.5,
+                url: "https://www.hubspot.com",
+                color: "orange",
+                section: "marketing"
+            },
+            {
+                name: "Mailchimp AI",
+                category: "Marketing Tools",
+                description: "AI-driven email marketing and audience management.",
+                tags: ["email marketing", "automation", "audience", "campaigns"],
+                rating: 4.3,
+                url: "https://mailchimp.com",
+                color: "yellow",
+                section: "marketing"
+            },
+            {
+                name: "Hootsuite AI",
+                category: "Marketing Tools",
+                description: "AI-powered social media management and scheduling.",
+                tags: ["social media", "scheduling", "analytics", "management"],
+                rating: 4.2,
+                url: "https://hootsuite.com",
+                color: "blue",
+                section: "marketing"
+            },
+
+            // Office Tools
+            {
+                name: "Tome",
+                category: "Office Tools",
+                description: "AI-powered presentation maker that creates slides from prompts.",
+                tags: ["presentation", "PPT", "slides", "AI generation"],
+                rating: 4.2,
+                url: "https://tome.app",
+                color: "indigo",
+                section: "office"
+            },
+            {
+                name: "Otter.ai",
+                category: "Office Tools",
+                description: "AI meeting assistant that records and transcribes conversations.",
+                tags: ["transcription", "meetings", "notes", "voice recording"],
+                rating: 4.3,
+                url: "https://otter.ai",
+                color: "blue",
+                section: "office"
+            },
+            {
+                name: "Zapier AI",
+                category: "Office Tools",
+                description: "AI-powered workflow automation between apps and services.",
+                tags: ["automation", "workflow", "integration", "productivity"],
+                rating: 4.4,
+                url: "https://zapier.com",
+                color: "orange",
+                section: "office"
+            }
+        ];
+
+        // 检测 Google OAuth 是否可用 - 简化版本
+        let googleOAuthAvailable = true; // 默认启用
+
+        async function checkGoogleOAuthAvailability() {
+            // 简化版本：直接显示 Google 登录按钮
+            updateGoogleButtonVisibility();
+        }
+
+        function updateGoogleButtonVisibility() {
+            // 始终显示 Google 按钮和分隔线
+            const googleButtons = document.querySelectorAll('.google-button');
+            const dividers = document.querySelectorAll('.divider');
+            
+            googleButtons.forEach(button => button.style.display = 'flex');
+            dividers.forEach(divider => divider.style.display = 'flex');
+        }
+
+        // ✅ Google OAuth 登录功能
+        async function signInWithGoogle() {
+            const { data, error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: {
+                    redirectTo: window.location.origin,
+                    queryParams: {
+                        access_type: 'offline',
+                        prompt: 'consent',
+                    },
+                },
+            });
+            console.log('✅ 开始 Google 登录流程...');
+            console.log('✅ 用户登录成功:', data?.user?.email);
+        }
+
+        // 用户状态管理
+        function updateUserStatus(user) {
+            currentUser = user;
+            const guestStatus = document.getElementById('guestStatus');
+            const loggedInStatus = document.getElementById('loggedInStatus');
+            const mobileGuestStatus = document.getElementById('mobileGuestStatus');
+            const mobileLoggedInStatus = document.getElementById('mobileLoggedInStatus');
+            
+            if (user) {
+                // 显示已登录状态
+                guestStatus.classList.add('hidden');
+                loggedInStatus.classList.remove('hidden');
+                mobileGuestStatus.classList.add('hidden');
+                mobileLoggedInStatus.classList.remove('hidden');
+                
+                // 更新用户信息
+                const userEmail = user.email;
+                const userAvatar = user.user_metadata?.avatar_url;
+                const userName = user.user_metadata?.full_name || user.user_metadata?.name;
+                const userInitial = (userName || userEmail).charAt(0).toUpperCase();
+                
+                // 桌面版用户信息
+                const avatarElement = document.getElementById('userAvatar');
+                if (userAvatar) {
+                    avatarElement.innerHTML = `<img src="${userAvatar}" alt="User Avatar" />`;
+                } else {
+                    avatarElement.textContent = userInitial;
+                }
+                
+                // 移动版用户信息
+                const mobileAvatarElement = document.getElementById('mobileUserAvatar');
+                if (userAvatar) {
+                    mobileAvatarElement.innerHTML = `<img src="${userAvatar}" alt="User Avatar" />`;
+                } else {
+                    mobileAvatarElement.textContent = userInitial;
+                }
+                
+                document.getElementById('userEmail').textContent = userEmail;
+                document.getElementById('mobileUserEmail').textContent = userEmail;
+            } else {
+                // 显示游客状态
+                guestStatus.classList.remove('hidden');
+                loggedInStatus.classList.add('hidden');
+                mobileGuestStatus.classList.remove('hidden');
+                mobileLoggedInStatus.classList.add('hidden');
+            }
+        }
+
+        // 用户注册（邮箱密码）
+        async function signUp() {
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const name = document.getElementById('signupName').value;
+            
+            if (!email || !password || !name) {
+                showMessage('Please fill in all fields', 'error');
+                return;
+            }
+            
+            setLoadingState(true);
+            clearMessages();
+            
+            try {
+                const { data, error } = await supabase.auth.signUp({
+                    email: email,
+                    password: password,
+                    options: {
+                        data: {
+                            full_name: name
+                        }
+                    }
+                });
+                
+                if (error) {
+                    showMessage('注册失败: ' + error.message, 'error');
+                } else {
+                    showMessage('注册成功！请查收邮箱验证邮件', 'success');
+                    setTimeout(() => {
+                        closeModal();
+                    }, 2000);
+                }
+            } catch (error) {
+                showMessage('注册失败: ' + error.message, 'error');
+            } finally {
+                setLoadingState(false);
+            }
+        }
+
+        // 用户登录（邮箱密码）
+        async function signIn() {
+            const email = document.getElementById('signinEmail').value;
+            const password = document.getElementById('signinPassword').value;
+            
+            if (!email || !password) {
+                showMessage('Please fill in all fields', 'error');
+                return;
+            }
+            
+            setLoadingState(true);
+            clearMessages();
+            
+            try {
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+                
+                if (error) {
+                    showMessage('登录失败: ' + error.message, 'error');
+                } else {
+                    showMessage('登录成功！', 'success');
+                    updateUserStatus(data.user);
+                    setTimeout(() => {
+                        closeModal();
+                    }, 1000);
+                }
+            } catch (error) {
+                showMessage('登录失败: ' + error.message, 'error');
+            } finally {
+                setLoadingState(false);
+            }
+        }
+
+        // 用户退出
+        async function handleLogout() {
+            try {
+                const { error } = await supabase.auth.signOut();
+                if (error) {
+                    alert('退出失败: ' + error.message);
+                } else {
+                    updateUserStatus(null);
+                }
+            } catch (error) {
+                alert('退出失败: ' + error.message);
+            }
+        }
+
+        // 显示消息
+        function showMessage(message, type) {
+            const existingMessage = document.querySelector('.error-message, .success-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            const messageElement = document.createElement('div');
+            messageElement.className = type === 'error' ? 'error-message' : 'success-message';
+            messageElement.textContent = message;
+            
+            const modalContent = document.querySelector('#modalContent > div > div');
+            if (modalContent) {
+                modalContent.insertBefore(messageElement, modalContent.children[2]);
+            }
+        }
+
+        // 清除消息
+        function clearMessages() {
+            const messages = document.querySelectorAll('.error-message, .success-message');
+            messages.forEach(message => message.remove());
+        }
+
+        // 设置加载状态
+        function setLoadingState(isLoading) {
+            const buttons = document.querySelectorAll('#modalContent button[type="submit"], #modalContent .google-button');
+            buttons.forEach(button => {
+                if (isLoading) {
+                    button.disabled = true;
+                    if (button.classList.contains('google-button')) {
+                        button.innerHTML = '<div class="w-5 h-5 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>Connecting...';
+                    } else {
+                        button.textContent = 'Loading...';
+                    }
+                } else {
+                    button.disabled = false;
+                    if (button.classList.contains('google-button')) {
+                        button.innerHTML = `
+                            <svg class="google-icon" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            Continue with Google
+                        `;
+                    } else {
+                        const originalText = button.dataset.originalText;
+                        if (originalText) {
+                            button.textContent = originalText;
+                        }
+                    }
+                }
+            });
+        }
+
+        // 监听认证状态变化
+        supabase.auth.onAuthStateChange((event, session) => {
+            console.log('认证状态变化:', event);
+            
+            if (event === 'SIGNED_IN') {
+                console.log('用户登录成功:', session.user.email);
+                updateUserStatus(session.user);
+                
+                // 检查是否是 OAuth 登录后的回调
+                const urlParams = new URLSearchParams(window.location.search);
+                const isOAuthCallback = urlParams.has('code') || urlParams.has('access_token');
+                
+                // 如果模态框还在显示（邮箱密码登录），关闭它
+                const modal = document.getElementById('authModal');
+                if (modal && !modal.classList.contains('hidden')) {
+                    showMessage('登录成功！欢迎回来！', 'success');
+                    setTimeout(() => {
+                        closeModal();
+                    }, 1500);
+                } else if (isOAuthCallback) {
+                    // OAuth 登录回调，显示欢迎消息
+                    showWelcomeMessage(session.user);
+                    
+                    // 清理 URL 参数
+                    const cleanUrl = window.location.pathname;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+                
+            } else if (event === 'SIGNED_OUT') {
+                console.log('用户已登出');
+                updateUserStatus(null);
+            }
+        });
+
+        // 显示欢迎消息
+        function showWelcomeMessage(user) {
+            const welcomeDiv = document.createElement('div');
+            welcomeDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300';
+            welcomeDiv.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>欢迎回来，${user.user_metadata?.full_name || user.email}！</span>
+                </div>
+            `;
+            
+            document.body.appendChild(welcomeDiv);
+            
+            // 3秒后自动消失
+            setTimeout(() => {
+                welcomeDiv.style.opacity = '0';
+                welcomeDiv.style.transform = 'translateY(-20px)';
+                setTimeout(() => {
+                    if (welcomeDiv.parentNode) {
+                        welcomeDiv.parentNode.removeChild(welcomeDiv);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // 获取当前用户
+        async function getCurrentUser() {
+            try {
+                const { data: { user }, error } = await supabase.auth.getUser();
+                if (error) {
+                    console.error('获取用户失败:', error);
+                } else if (user) {
+                    console.log('发现已登录用户:', user.email);
+                    updateUserStatus(user);
+                } else {
+                    updateUserStatus(null);
+                }
+            } catch (error) {
+                console.error('获取用户时发生异常:', error);
+            }
+        }
+
+        // Search functionality
+        let currentSearchResults = [];
+
+        function handleSearchKeydown(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        }
+
+        function performSearch() {
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim().toLowerCase();
+            
+            if (query) {
+                // Search through tools
+                currentSearchResults = aiTools.filter(tool => {
+                    return tool.name.toLowerCase().includes(query) ||
+                           tool.description.toLowerCase().includes(query) ||
+                           tool.category.toLowerCase().includes(query) ||
+                           tool.tags.some(tag => tag.toLowerCase().includes(query));
+                });
+
+                // Show search results
+                displaySearchResults(query, currentSearchResults);
+                
+                // Scroll to results
+                const searchSection = document.getElementById('search-results');
+                if (searchSection) {
+                    searchSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        function searchHotKeyword(keyword) {
+            const searchInput = document.getElementById('search-input');
+            searchInput.value = keyword;
+            performSearch();
+        }
+
+        function displaySearchResults(query, results) {
+            // Create or update search results section
+            let searchSection = document.getElementById('search-results');
+            
+            if (!searchSection) {
+                // Create new search results section
+                searchSection = document.createElement('section');
+                searchSection.id = 'search-results';
+                searchSection.className = 'py-16 bg-yellow-50 dark:bg-gray-800';
+                
+                // Insert after hero section
+                const heroSection = document.querySelector('.bg-gray-50.dark\\:bg-gray-900.py-20');
+                heroSection.parentNode.insertBefore(searchSection, heroSection.nextSibling);
+            }
+
+            // Generate search results HTML
+            const resultsHtml = `
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mb-8">
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                            Search Results for "${query}"
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Found ${results.length} tool${results.length !== 1 ? 's' : ''}
+                        </p>
+                        <button 
+                            onclick="clearSearch()" 
+                            class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                        >
+                            Clear Search
+                        </button>
+                    </div>
+                    <div class="tools-grid">
+                        ${results.map(tool => createToolCard(tool)).join('')}
+                    </div>
+                    ${results.length === 0 ? `
+                        <div class="text-center py-12">
+                            <div class="text-6xl mb-4">🔍</div>
+                            <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">No tools found</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Try searching with different keywords</p>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+
+            searchSection.innerHTML = resultsHtml;
+            searchSection.style.display = 'block';
+        }
+
+        function createToolCard(tool) {
+            const hoverColors = {
+                red: 'hover:border-red-500 hover:text-red-500 dark:hover:border-red-400 dark:hover:text-red-400',
+                green: 'hover:border-green-500 hover:text-green-500 dark:hover:border-green-400 dark:hover:text-green-400',
+                blue: 'hover:border-blue-500 hover:text-blue-500 dark:hover:border-blue-400 dark:hover:text-blue-400',
+                purple: 'hover:border-purple-500 hover:text-purple-500 dark:hover:border-purple-400 dark:hover:text-purple-400',
+                pink: 'hover:border-pink-500 hover:text-pink-500 dark:hover:border-pink-400 dark:hover:text-pink-400',
+                orange: 'hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-400 dark:hover:text-orange-400',
+                gray: 'hover:border-gray-500 hover:text-gray-500 dark:hover:border-gray-400 dark:hover:text-gray-400',
+                indigo: 'hover:border-indigo-500 hover:text-indigo-500 dark:hover:border-indigo-400 dark:hover:text-indigo-400',
+                yellow: 'hover:border-yellow-500 hover:text-yellow-500 dark:hover:border-yellow-400 dark:hover:text-yellow-400'
+            };
+
+            return `
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col h-full">
+                    <!-- Tool Screenshot -->
+                    <div class="p-4">
+                        <img 
+                            src="https://image.thum.io/get/width/800/crop/600/${tool.url}" 
+                            alt="${tool.name} Screenshot" 
+                            class="w-full h-48 object-cover rounded-xl mb-4 screenshot-hover" 
+                            loading="lazy"
+                            title="Click to visit ${tool.name}"
+                            onclick="window.open('${tool.url}', '_blank')"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        />
+                        <!-- Fallback when image fails to load -->
+                        <div class="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-xl mb-4 flex items-center justify-center" style="display: none;">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">${tool.name.charAt(0)}</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Screenshot not available</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="p-6 pt-0 flex flex-col flex-grow">
+                        <!-- Tool Name, Rating and Category -->
+                        <div class="mb-3">
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">${tool.name}</h3>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-400 text-sm">★</span>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 ml-1">${tool.rating}</span>
+                                </div>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">${tool.category}</span>
+                        </div>
+                        
+                        <!-- Description -->
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-grow">${tool.description}</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            ${tool.tags.map(tag => `
+                                <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-3 py-1 rounded-full">${tag}</span>
+                            `).join('')}
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <button 
+                            onclick="window.open('${tool.url}', '_blank')"
+                            class="w-full border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 ${hoverColors[tool.color]} font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center mt-auto"
+                        >
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function clearSearch() {
+            // Clear search input
+            document.getElementById('search-input').value = '';
+            
+            // Hide search results
+            const searchSection = document.getElementById('search-results');
+            if (searchSection) {
+                searchSection.style.display = 'none';
+            }
+            
+            // Scroll back to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Handle Sign In and Sign Up Functions
+        function handleSignIn() {
+            showModal('signin');
+        }
+
+        function handleSignUp() {
+            showModal('signup');
+        }
+
+        function showModal(type) {
+            const modal = document.getElementById('authModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            if (type === 'signin') {
+                modalContent.innerHTML = `
+                    <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+                        <!-- Header -->
+                        <div class="relative p-8 pb-6">
+                            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                            
+                            <!-- Logo -->
+                            <div class="text-center mb-6">
+                                <div class="flex items-center justify-center mb-4">
+                                    <svg class="w-10 h-10 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#667eea" stroke-width="3"/>
+                                        <rect x="25" y="10" width="20" height="8" rx="2" fill="#667eea"/>
+                                        <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                                        <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#667eea"/>
+                                        <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                                        <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                                    </svg>
+                                    <span class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</span>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Sign in to OfficeAIHub</h2>
+                                <p class="text-gray-600 dark:text-gray-400">Welcome back! Please sign in to continue</p>
+                            </div>
+                            
+                            <!-- Google Login Button -->
+                            <button onclick="signInWithGoogle()" class="google-button mb-4">
+                                <svg class="google-icon" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                </svg>
+                                Continue with Google
+                            </button>
+                            
+                            <!-- Divider -->
+                            <div class="divider">
+                                <span class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800">or</span>
+                            </div>
+                            
+                            <!-- Email Form -->
+                            <form onsubmit="handleEmailSignIn(event)">
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email address</label>
+                                    <input type="email" id="signinEmail" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white modal-input" placeholder="Enter your email">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                                    <input type="password" id="signinPassword" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white modal-input" placeholder="Enter your password">
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-blue-600 dark:bg-blue-700 text-white py-3 px-4 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium modal-button" data-original-text="Sign In →">
+                                    Sign In →
+                                </button>
+                            </form>
+                            
+                            <!-- Sign Up Link -->
+                            <div class="mt-6 text-center">
+                                <span class="text-gray-600 dark:text-gray-400">Don't have an account? </span>
+                                <button onclick="showModal('signup')" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">Sign up</button>
+                            </div>
+                            
+                            <!-- Footer -->
+                            <div class="mt-8 text-center">
+                                <span class="text-xs text-gray-500 dark:text-gray-400">Secured by OfficeAIHub</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                modalContent.innerHTML = `
+                    <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+                        <!-- Header -->
+                        <div class="relative p-8 pb-6">
+                            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                            
+                            <!-- Logo -->
+                            <div class="text-center mb-6">
+                                <div class="flex items-center justify-center mb-4">
+                                    <svg class="w-10 h-10 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#667eea" stroke-width="3"/>
+                                        <rect x="25" y="10" width="20" height="8" rx="2" fill="#667eea"/>
+                                        <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                                        <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                                        <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#667eea"/>
+                                        <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                                        <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                                    </svg>
+                                    <span class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</span>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Create your account</h2>
+                                <p class="text-gray-600 dark:text-gray-400">Join thousands of professionals using AI tools</p>
+                            </div>
+                            
+                            <!-- Google Signup Button -->
+                            <button onclick="signInWithGoogle()" class="google-button mb-4">
+                                <svg class="google-icon" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                </svg>
+                                Continue with Google
+                            </button>
+                            
+                            <!-- Divider -->
+                            <div class="divider">
+                                <span class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800">or</span>
+                            </div>
+                            
+                            <!-- Email Form -->
+                            <form onsubmit="handleEmailSignUp(event)">
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email address</label>
+                                    <input type="email" id="signupEmail" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white modal-input" placeholder="Enter your email">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full name</label>
+                                    <input type="text" id="signupName" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white modal-input" placeholder="Enter your full name">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                                    <input type="password" id="signupPassword" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white modal-input" placeholder="Enter your password">
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-blue-600 dark:bg-blue-700 text-white py-3 px-4 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium modal-button" data-original-text="Create Account →">
+                                    Create Account →
+                                </button>
+                            </form>
+                            
+                            <!-- Sign In Link -->
+                            <div class="mt-6 text-center">
+                                <span class="text-gray-600 dark:text-gray-400">Already have an account? </span>
+                                <button onclick="showModal('signin')" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">Sign in</button>
+                            </div>
+                            
+                            <!-- Footer -->
+                            <div class="mt-8 text-center">
+                                <span class="text-xs text-gray-500 dark:text-gray-400">Secured by OfficeAIHub</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // 更新 Google 按钮可见性
+            setTimeout(() => {
+                updateGoogleButtonVisibility();
+            }, 100);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('authModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleEmailSignIn(event) {
+            event.preventDefault();
+            signIn();
+        }
+
+        function handleEmailSignUp(event) {
+            event.preventDefault();
+            signUp();
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('authModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        function populateSection(elementId, section) {
+            const container = document.getElementById(elementId);
+            if (!container) return;
+
+            const sectionTools = aiTools.filter(tool => tool.section === section);
+            container.innerHTML = sectionTools.map(tool => createToolCard(tool)).join('');
+        }
+
+        // Initialize page with tools
+        function initializePage() {
+            populateSection('featuredTools', 'featured');
+            populateSection('writingTools', 'writing');
+            populateSection('designTools', 'design');
+            populateSection('marketingTools', 'marketing');
+            populateSection('officeTools', 'office');
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 OfficeAIHub 初始化...');
+            
+            const darkMode = localStorage.getItem('darkMode') === 'true';
+            if (darkMode) {
+                document.documentElement.classList.add('dark');
+            }
+            
+            // Initialize all tool sections
+            initializePage();
+            
+            // Check Google OAuth availability
+            checkGoogleOAuthAvailability();
+            
+            // Get current user on page load
+            getCurrentUser();
+        });
+    </script>
+</body>
+</html>
