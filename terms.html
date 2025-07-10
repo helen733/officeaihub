@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - OfficeAIHub</title>
+    <meta name="description" content="Read OfficeAIHub's terms of service to understand the rules and guidelines for using our AI tools directory platform.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='20' width='60' height='70' rx='8' fill='none' stroke='%23666' stroke-width='3'/%3E%3Crect x='25' y='10' width='20' height='8' rx='2' fill='%23666'/%3E%3Cline x1='20' y1='35' x2='50' y2='35' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='45' x2='40' y2='45' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='55' x2='35' y2='55' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='65' x2='45' y2='65' stroke='%23ccc' stroke-width='2'/%3E%3Cpath d='M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z' fill='%23666'/%3E%3Crect x='55' y='40' width='35' height='25' rx='5' fill='none' stroke='%2300C896' stroke-width='3'/%3E%3Ctext x='72.5' y='58' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%2300C896'%3EAI%3C/text%3E%3C/svg%3E">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .dark {
+            color-scheme: dark;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = localStorage.getItem('darkMode') === 'true' || false; $watch('darkMode', val => { localStorage.setItem('darkMode', val); if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- Logo Icon -->
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</a>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="privacy.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Privacy</a>
+                    <a href="terms.html" class="text-blue-600 font-medium">Terms</a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Toggle dark mode"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                    
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Contact</a>
+                <a href="privacy.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Privacy</a>
+                <a href="terms.html" class="block px-3 py-2 text-blue-600 font-medium">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Page Header -->
+        <section class="bg-gray-50 dark:bg-gray-800 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Terms of Service</h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Please read these terms carefully before using our AI tools directory platform</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">Last updated: January 10, 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    
+                    <!-- Agreement to Terms -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Agreement to Terms</h2>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            By accessing this website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            These terms constitute a legal agreement between you and OfficeAIHub. You agree not to misuse the content or functionalities of our website. All product links are external and may be affiliated with commission-based partnerships.
+                        </p>
+                    </div>
+
+                    <!-- Use License -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Use License</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Permission is granted to temporarily access and use the materials on OfficeAIHub for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                        </p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2 mb-4">
+                            <li>• Modify or copy the materials without permission</li>
+                            <li>• Use the materials for any commercial purpose or for any public display</li>
+                            <li>• Attempt to reverse engineer any software contained on OfficeAIHub</li>
+                            <li>• Remove any copyright or other proprietary notations from the materials</li>
+                            <li>• Transfer the materials to another person or "mirror" the materials on any other server</li>
+                        </ul>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+                        </p>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Disclaimer</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            The materials on OfficeAIHub are provided on an 'as is' basis. OfficeAIHub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Further, OfficeAIHub does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+                        </p>
+                    </div>
+
+                    <!-- External Links and Affiliates -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">External Links and Affiliate Relationships</h2>
+                        
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Third-Party Links</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            OfficeAIHub contains links to external websites and AI tools that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+                        </p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Affiliate Disclosure</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Some links on our website are affiliate links, meaning we may earn a commission if you click through and make a purchase. This does not affect the price you pay, and we only recommend tools we genuinely believe are valuable.
+                        </p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">No Endorsement</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            The inclusion of any link does not imply endorsement by OfficeAIHub of the site or any association with its operators. You acknowledge and agree that we shall not be responsible or liable for any loss or damage caused by use of any such content, goods, or services available on such websites.
+                        </p>
+                    </div>
+
+                    <!-- User Conduct -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">User Conduct</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">You agree to use OfficeAIHub only for lawful purposes and in a manner that does not infringe upon the rights of others. You may not:</p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>• Post or transmit any content that is illegal, harmful, threatening, abusive, or offensive</li>
+                            <li>• Impersonate any person or entity or misrepresent your affiliation with a person or entity</li>
+                            <li>• Interfere with or disrupt the website or servers connected to the website</li>
+                            <li>• Attempt to gain unauthorized access to any portion of the website</li>
+                            <li>• Use automated systems to access the website without permission</li>
+                            <li>• Violate any applicable local, state, national, or international law</li>
+                            <li>• Submit false or misleading information</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intellectual Property -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Intellectual Property Rights</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            The content, organization, graphics, design, compilation, magnetic translation, digital conversion, and other matters related to OfficeAIHub are protected under applicable copyrights, trademarks, and other proprietary rights.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            All trademarks, service marks, and trade names are proprietary to OfficeAIHub or other respective owners that have granted us the right and license to use such marks.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products, or services obtained from OfficeAIHub without our express written permission.
+                        </p>
+                    </div>
+
+                    <!-- Privacy and Data -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Privacy and Data Collection</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these terms by reference. By using our website, you consent to the collection and use of your information as outlined in our Privacy Policy.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We may use cookies and similar tracking technologies to improve your browsing experience and analyze website traffic. You can control cookie settings through your browser preferences.
+                        </p>
+                    </div>
+
+                    <!-- Limitations of Liability -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Limitations of Liability</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            In no event shall OfficeAIHub or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on OfficeAIHub, even if OfficeAIHub or an authorized representative has been notified orally or in writing of the possibility of such damage.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you. Our total liability to you for any claims arising out of your use of the website shall not exceed the amount you paid to access our services, if any.
+                        </p>
+                    </div>
+
+                    <!-- Indemnification -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Indemnification</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            You agree to indemnify, defend, and hold harmless OfficeAIHub and its officers, directors, employees, agents, and affiliates from and against any and all claims, damages, obligations, losses, liabilities, costs, debt, and expenses (including attorney's fees) arising from your use of and access to the website, your violation of these terms, or your infringement of any intellectual property or other right of any person or entity.
+                        </p>
+                    </div>
+
+                    <!-- Termination -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Termination</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            We may terminate or suspend your access to our website immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the terms of service.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Upon termination, your right to use the website will cease immediately. All provisions of the terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+                        </p>
+                    </div>
+
+                    <!-- Governing Law -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Governing Law</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            These terms and conditions are governed by and construed in accordance with the laws of the United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location. Any legal action or proceeding arising under these terms will be brought exclusively in courts located in the United States.
+                        </p>
+                    </div>
+
+                    <!-- Changes to Terms -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Changes to Terms</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            We reserve the right to modify these terms at any time. Changes will be effective when posted on this page with a new "Last updated" date. Your continued use of the website after such modifications constitutes your acceptance of the updated terms.
+                        </p>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We encourage you to review these terms periodically to stay informed of any changes. If you do not agree to the modified terms, you should discontinue your use of the website.
+                        </p>
+                    </div>
+
+                    <!-- Severability -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Severability</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            If any provision of these terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the terms will otherwise remain in full force and effect and enforceable.
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Information</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            If you have any questions about these Terms of Service, please contact us:
+                        </p>
+                        
+                        <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <p><strong>Email:</strong> officeaihub@gmail.com</p>
+                            <p><strong>Website:</strong> <a href="https://officeaihub.com" class="text-blue-600 hover:text-blue-700">officeaihub.com</a></p>
+                            <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+                            <p class="text-yellow-800 dark:text-yellow-200 text-sm">
+                                <strong>Important:</strong> By using OfficeAIHub, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h3 class="text-xl font-bold">OfficeAIHub</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Discover the most powerful AI tools to enhance your workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
+                        <li><a href="index.html#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
+                        <li><a href="index.html#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
+                        <li><a href="index.html#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Pages</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 OfficeAIHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

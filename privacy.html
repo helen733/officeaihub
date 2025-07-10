@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - OfficeAIHub</title>
+    <meta name="description" content="Read OfficeAIHub's privacy policy to understand how we collect, use, and protect your personal information.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='20' width='60' height='70' rx='8' fill='none' stroke='%23666' stroke-width='3'/%3E%3Crect x='25' y='10' width='20' height='8' rx='2' fill='%23666'/%3E%3Cline x1='20' y1='35' x2='50' y2='35' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='45' x2='40' y2='45' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='55' x2='35' y2='55' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='65' x2='45' y2='65' stroke='%23ccc' stroke-width='2'/%3E%3Cpath d='M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z' fill='%23666'/%3E%3Crect x='55' y='40' width='35' height='25' rx='5' fill='none' stroke='%2300C896' stroke-width='3'/%3E%3Ctext x='72.5' y='58' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%2300C896'%3EAI%3C/text%3E%3C/svg%3E">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .dark {
+            color-scheme: dark;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = localStorage.getItem('darkMode') === 'true' || false; $watch('darkMode', val => { localStorage.setItem('darkMode', val); if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- Logo Icon -->
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</a>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="privacy.html" class="text-blue-600 font-medium">Privacy</a>
+                    <a href="terms.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Terms</a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        title="Toggle dark mode"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button 
+                        @click="darkMode = !darkMode"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    >
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
+                    </button>
+                    
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Contact</a>
+                <a href="privacy.html" class="block px-3 py-2 text-blue-600 font-medium">Privacy</a>
+                <a href="terms.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Page Header -->
+        <section class="bg-gray-50 dark:bg-gray-800 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Privacy Policy</h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Learn how we collect, use, and protect your personal information</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">Last updated: January 10, 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    
+                    <!-- Introduction -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Introduction</h2>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how OfficeAIHub ("we," "our," or "us") collects, uses, and safeguards your information when you visit our website or use our services.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We do not collect personal information unless you voluntarily submit it via our contact form or user registration. We may use third-party affiliate programs, but we do not track or store user data directly without your explicit consent.
+                        </p>
+                    </div>
+
+                    <!-- Information We Collect -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
+                        
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Information You Provide Voluntarily</h3>
+                        <ul class="text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+                            <li>• Contact information when you reach out to us via our contact form</li>
+                            <li>• Email address if you subscribe to our newsletter</li>
+                            <li>• User account information if you create an account</li>
+                            <li>• Feedback and suggestions you submit to us</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Automatically Collected Information</h3>
+                        <ul class="text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+                            <li>• Browser type and version</li>
+                            <li>• Device information and operating system</li>
+                            <li>• IP address and general location information</li>
+                            <li>• Pages visited and time spent on our website</li>
+                            <li>• Referring website information</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Third-Party Information</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We may receive information from third-party services like Google Analytics to help us understand website usage patterns and improve user experience. This information is aggregated and does not personally identify individual users.
+                        </p>
+                    </div>
+
+                    <!-- How We Use Your Information -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How We Use Your Information</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We use the information we collect for the following purposes:</p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>• To respond to your inquiries and provide customer support</li>
+                            <li>• To improve our website functionality and user experience</li>
+                            <li>• To send newsletters and updates (only if you've subscribed)</li>
+                            <li>• To analyze website traffic and usage patterns</li>
+                            <li>• To prevent fraud and ensure website security</li>
+                            <li>• To comply with legal obligations</li>
+                            <li>• To develop and improve our content and services</li>
+                        </ul>
+                    </div>
+
+                    <!-- Information Sharing -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Information Sharing and Disclosure</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                        
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Service Providers</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We may share information with trusted third-party service providers who help us operate our website, such as hosting providers, analytics services, and email marketing platforms. These providers are bound by confidentiality agreements.</p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Legal Requirements</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We may disclose information if required by law, court order, or governmental request, or to protect our rights, property, or safety.</p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Affiliate Programs</h3>
+                        <p class="text-gray-600 dark:text-gray-300">We participate in affiliate marketing programs. When you click on affiliate links, the third-party vendor may collect information about your visit. We do not control their privacy practices.</p>
+                    </div>
+
+                    <!-- Cookies and Tracking -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Cookies and Tracking Technologies</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We use cookies and similar tracking technologies to enhance your browsing experience:</p>
+                        
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Essential Cookies</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Required for basic website functionality, such as maintaining your session and remembering your preferences (like dark mode settings).</p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Analytics Cookies</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Help us understand how visitors use our website by collecting anonymous usage statistics.</p>
+
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Advertising Cookies</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Used by affiliate partners to track referrals and attribute commissions. You can disable these through your browser settings.</p>
+                    </div>
+
+                    <!-- Data Security -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Data Security</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">We implement appropriate technical and organizational measures to protect your personal information:</p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>• SSL encryption for data transmission</li>
+                            <li>• Secure hosting and database storage</li>
+                            <li>• Regular security updates and monitoring</li>
+                            <li>• Limited access to personal information</li>
+                            <li>• Regular backup and recovery procedures</li>
+                        </ul>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mt-4">However, no method of transmission over the Internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+                    </div>
+
+                    <!-- Your Rights -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Your Rights and Choices</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">You have the following rights regarding your personal information:</p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>• <strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                            <li>• <strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                            <li>• <strong>Deletion:</strong> Request deletion of your personal information</li>
+                            <li>• <strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
+                            <li>• <strong>Data Portability:</strong> Request transfer of your data to another service</li>
+                        </ul>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mt-4">To exercise these rights, please contact us at officeaihub@gmail.com. We will respond to your request within 30 days.</p>
+                    </div>
+
+                    <!-- Third-Party Links -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Third-Party Links</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our website contains links to third-party websites and services, including AI tools we review and recommend. These external sites have their own privacy policies and terms of service. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review their privacy policies before providing any personal information.
+                        </p>
+                    </div>
+
+                    <!-- Children's Privacy -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Children's Privacy</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information promptly.
+                        </p>
+                    </div>
+
+                    <!-- Policy Updates -->
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Changes to This Privacy Policy</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make changes, we will:
+                        </p>
+                        
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li>• Update the "Last updated" date at the top of this policy</li>
+                            <li>• Notify users of significant changes via email or website notice</li>
+                            <li>• Provide a summary of key changes when applicable</li>
+                        </ul>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mt-4">
+                            By using this site, you agree to the collection and use of information in accordance with this policy. Continued use of our website after policy changes implies acceptance of the updated terms.
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Us</h2>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            If you have any questions about this Privacy Policy or our privacy practices, please contact us:
+                        </p>
+                        
+                        <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <p><strong>Email:</strong> officeaihub@gmail.com</p>
+                            <p><strong>Website:</strong> <a href="https://officeaihub.com" class="text-blue-600 hover:text-blue-700">officeaihub.com</a></p>
+                            <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h3 class="text-xl font-bold">OfficeAIHub</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Discover the most powerful AI tools to enhance your workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
+                        <li><a href="index.html#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
+                        <li><a href="index.html#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
+                        <li><a href="index.html#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Pages</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 OfficeAIHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+                
