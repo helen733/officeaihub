@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Reviews - In-Depth Analysis, Ratings & Comparisons 2025</title>
+    <meta name="description" content="Comprehensive AI tool reviews with detailed analysis, ratings, pros & cons. Compare ChatGPT, Midjourney, Claude, Jasper AI and 60+ professional AI tools for workplace efficiency.">
+    <meta name="keywords" content="AI tool reviews, ChatGPT review, Midjourney review, AI tools comparison, professional AI tools ratings, best AI tools 2025">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="OfficeAIHub">
+    <meta name="language" content="en">
+    <link rel="canonical" href="https://www.officeaihub.com/reviews">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Tool Reviews - In-Depth Analysis & Ratings 2025" />
+    <meta property="og:description" content="Comprehensive reviews of 60+ professional AI tools. Compare features, pricing, and performance to find the best AI solutions." />
+    <meta property="og:url" content="https://www.officeaihub.com/reviews" />
+    <meta property="og:type" content="website" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ReviewPage",
+      "name": "AI Tool Reviews",
+      "description": "Comprehensive reviews and ratings of professional AI tools for workplace efficiency",
+      "url": "https://www.officeaihub.com/reviews",
+      "about": {
+        "@type": "Thing",
+        "name": "AI Tools for Professional Use"
+      }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        
+        .review-card {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .star-rating {
+            color: #FCD34D;
+        }
+        
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .pros-cons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .click-feedback {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+        
+        .click-feedback.show {
+            transform: translateX(0);
+        }
+        
+        .trending-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="office_ai_hub.html" class="flex items-center">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h1 class="text-2xl font-bold text-gray-900">OfficeAIHub</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="office_ai_hub.html" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="reviews.html" class="text-blue-600 font-medium">Reviews</a>
+                    <a href="guides.html" class="text-gray-700 hover:text-blue-600 transition-colors">Guides</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Click Feedback Notification -->
+    <div id="clickFeedback" class="click-feedback">
+        <i class="fas fa-check mr-2"></i>
+        <span>Click tracked! Data updated.</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">AI Tool Reviews</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+                In-depth analysis, honest ratings, and detailed comparisons of professional AI tools
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">⭐ Unbiased Ratings</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">🔍 Detailed Analysis</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">📊 Live Data Updates</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">💰 Pricing Insights</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-time Statistics Bar -->
+    <section class="py-4 bg-blue-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mouse-pointer text-blue-600"></i>
+                    <span class="text-gray-700">Today's Clicks: <strong id="total-daily-clicks" class="text-blue-600">2,847</strong></span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-fire text-red-500"></i>
+                    <span class="text-gray-700">Trending: <strong id="trending-tool" class="text-red-600">ChatGPT</strong></span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-users text-green-600"></i>
+                    <span class="text-gray-700">Active Users: <strong id="active-users" class="text-green-600">1,247</strong></span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-thumbs-up text-purple-600"></i>
+                    <span class="text-gray-700">Satisfaction: <strong id="avg-satisfaction" class="text-purple-600">94%</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter and Sort Section -->
+    <section class="py-8 bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3 mb-4">
+                <button onclick="filterTools('all')" class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors" data-filter="all">All Reviews</button>
+                <button onclick="filterTools('writing')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors" data-filter="writing">Writing Tools</button>
+                <button onclick="filterTools('design')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors" data-filter="design">Design Tools</button>
+                <button onclick="filterTools('marketing')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors" data-filter="marketing">Marketing Tools</button>
+                <button onclick="filterTools('office')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors" data-filter="office">Office Tools</button>
+                <button onclick="filterTools('video')" class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors" data-filter="video">Video & Audio</button>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="sortTools('popularity')" class="sort-btn px-3 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors" data-sort="popularity">🔥 Most Popular</button>
+                <button onclick="sortTools('rating')" class="sort-btn px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium hover:bg-yellow-200 transition-colors" data-sort="rating">⭐ Highest Rated</button>
+                <button onclick="sortTools('recent')" class="sort-btn px-3 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium hover:bg-green-200 transition-colors" data-sort="recent">🆕 Recently Added</button>
+                <button onclick="sortTools('engagement')" class="sort-btn px-3 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium hover:bg-pink-200 transition-colors" data-sort="engagement">💬 Most Engaging</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Reviews -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured AI Tool Reviews</h2>
+            
+            <div id="featured-reviews">
+                <!-- ChatGPT Review -->
+                <div class="review-card bg-white rounded-2xl shadow-lg border border-gray-200 mb-8 overflow-hidden" data-tool="chatgpt" data-category="writing" data-rating="4.9">
+                    <!-- Dynamic Popularity Badge -->
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="trending-badge pulse-animation" id="chatgpt-badge">🔥 #1 TRENDING</span>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-comments text-green-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">ChatGPT</h3>
+                                    <p class="text-gray-600">AI Conversational Assistant</p>
+                                    <div class="flex items-center space-x-3 mt-1">
+                                        <span class="text-sm text-gray-500" id="chatgpt-clicks">1,234 clicks today</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-sm text-green-600 font-medium" id="chatgpt-likes">👍 89% helpful</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full font-medium" id="chatgpt-growth">+15% this week</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-2xl star-rating mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="text-lg font-bold text-gray-900">4.9/5</div>
+                                <div class="text-sm text-gray-600">Editor's Choice</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            ChatGPT revolutionizes workplace communication and content creation with its advanced GPT-4 technology. From writing emails to coding assistance, it's become an indispensable tool for professionals across industries.
+                        </p>
+                        
+                        <div class="pros-cons-grid mb-6">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                                    <i class="fas fa-check-circle mr-2"></i>Pros
+                                </h4>
+                                <ul class="space-y-2 text-sm text-green-700">
+                                    <li>• Exceptional natural language understanding</li>
+                                    <li>• Versatile across multiple use cases</li>
+                                    <li>• Regular updates and improvements</li>
+                                    <li>• Strong coding and technical support</li>
+                                    <li>• Free tier available</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                                    <i class="fas fa-times-circle mr-2"></i>Cons
+                                </h4>
+                                <ul class="space-y-2 text-sm text-red-700">
+                                    <li>• Can generate outdated information</li>
+                                    <li>• Premium features require subscription</li>
+                                    <li>• Rate limits on free tier</li>
+                                    <li>• Occasional hallucinations</li>
+                                    <li>• No real-time data access</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600">Free + $20/mo</div>
+                                <div class="text-sm text-gray-600">Pricing</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600">Writing</div>
+                                <div class="text-sm text-gray-600">Best For</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-green-600">10/10</div>
+                                <div class="text-sm text-gray-600">Ease of Use</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <button onclick="trackClick('chatgpt', 'https://chat.openai.com')" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors relative overflow-hidden">
+                                    <span class="relative z-10">Try ChatGPT →</span>
+                                    <div class="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity"></div>
+                                </button>
+                                <a href="office_ai_hub.html" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                                    Explore All Tools
+                                </a>
+                            </div>
+                            
+                            <!-- Enhanced User Feedback -->
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-600">Helpful?</span>
+                                <button onclick="voteOnTool('chatgpt', 'like')" class="text-green-600 hover:text-green-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-up" id="chatgpt-like-btn"></i>
+                                    <span id="chatgpt-like-count" class="text-sm font-medium">234</span>
+                                </button>
+                                <button onclick="voteOnTool('chatgpt', 'dislike')" class="text-red-600 hover:text-red-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-down" id="chatgpt-dislike-btn"></i>
+                                    <span id="chatgpt-dislike-count" class="text-sm font-medium">12</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Midjourney Review -->
+                <div class="review-card bg-white rounded-2xl shadow-lg border border-gray-200 mb-8 overflow-hidden" data-tool="midjourney" data-category="design" data-rating="4.8">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold" id="midjourney-badge">⭐ TOP RATED</span>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Midjourney</h3>
+                                    <p class="text-gray-600">AI Art & Image Generator</p>
+                                    <div class="flex items-center space-x-3 mt-1">
+                                        <span class="text-sm text-gray-500" id="midjourney-clicks">987 clicks today</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-sm text-green-600 font-medium" id="midjourney-likes">👍 92% helpful</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium" id="midjourney-growth">+8% this week</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-2xl star-rating mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="text-lg font-bold text-gray-900">4.8/5</div>
+                                <div class="text-sm text-gray-600">Best for Creativity</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Midjourney leads the AI art generation space with stunning, artistic image creation capabilities. Perfect for creative professionals, marketers, and anyone needing high-quality visual content.
+                        </p>
+                        
+                        <div class="pros-cons-grid mb-6">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                                    <i class="fas fa-check-circle mr-2"></i>Pros
+                                </h4>
+                                <ul class="space-y-2 text-sm text-green-700">
+                                    <li>• Exceptional artistic quality</li>
+                                    <li>• Unique and creative interpretations</li>
+                                    <li>• Active community and sharing</li>
+                                    <li>• Regular model improvements</li>
+                                    <li>• Discord integration</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                                    <i class="fas fa-times-circle mr-2"></i>Cons
+                                </h4>
+                                <ul class="space-y-2 text-sm text-red-700">
+                                    <li>• No free tier available</li>
+                                    <li>• Requires Discord knowledge</li>
+                                    <li>• Limited commercial licensing</li>
+                                    <li>• Queue times during peak hours</li>
+                                    <li>• Text generation challenges</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600">$10-60/mo</div>
+                                <div class="text-sm text-gray-600">Pricing</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600">Design</div>
+                                <div class="text-sm text-gray-600">Best For</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-orange-600">7/10</div>
+                                <div class="text-sm text-gray-600">Ease of Use</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <button onclick="trackClick('midjourney', 'https://www.midjourney.com')" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                                    Try Midjourney →
+                                </button>
+                                <a href="office_ai_hub.html" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                                    Explore All Tools
+                                </a>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-600">Helpful?</span>
+                                <button onclick="voteOnTool('midjourney', 'like')" class="text-green-600 hover:text-green-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-up" id="midjourney-like-btn"></i>
+                                    <span id="midjourney-like-count" class="text-sm font-medium">198</span>
+                                </button>
+                                <button onclick="voteOnTool('midjourney', 'dislike')" class="text-red-600 hover:text-red-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-down" id="midjourney-dislike-btn"></i>
+                                    <span id="midjourney-dislike-count" class="text-sm font-medium">8</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claude Review -->
+                <div class="review-card bg-white rounded-2xl shadow-lg border border-gray-200 mb-8 overflow-hidden" data-tool="claude" data-category="writing" data-rating="4.8">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold" id="claude-badge">🆕 RISING</span>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-robot text-orange-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Claude</h3>
+                                    <p class="text-gray-600">AI Assistant by Anthropic</p>
+                                    <div class="flex items-center space-x-3 mt-1">
+                                        <span class="text-sm text-gray-500" id="claude-clicks">756 clicks today</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-sm text-green-600 font-medium" id="claude-likes">👍 94% helpful</span>
+                                        <span class="text-sm text-gray-500">•</span>
+                                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-medium" id="claude-growth">+22% this week</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="flex items-center space-x-1 text-2xl star-rating mb-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="text-lg font-bold text-gray-900">4.8/5</div>
+                                <div class="text-sm text-gray-600">Most Helpful</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Claude by Anthropic excels at analysis, writing, and coding with strong safety features. Known for being helpful, harmless, and honest, it's perfect for professional tasks requiring nuanced understanding.
+                        </p>
+                        
+                        <div class="pros-cons-grid mb-6">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-3 flex items-center">
+                                    <i class="fas fa-check-circle mr-2"></i>Pros
+                                </h4>
+                                <ul class="space-y-2 text-sm text-green-700">
+                                    <li>• Excellent reasoning and analysis</li>
+                                    <li>• Strong safety and alignment</li>
+                                    <li>• Great for complex problem-solving</li>
+                                    <li>• Honest about limitations</li>
+                                    <li>• Free tier with generous limits</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-3 flex items-center">
+                                    <i class="fas fa-times-circle mr-2"></i>Cons
+                                </h4>
+                                <ul class="space-y-2 text-sm text-red-700">
+                                    <li>• More conservative in responses</li>
+                                    <li>• Limited web browsing capabilities</li>
+                                    <li>• Newer than established competitors</li>
+                                    <li>• Premium features cost extra</li>
+                                    <li>• Less integration with third-party tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-blue-600">Free + $20/mo</div>
+                                <div class="text-sm text-gray-600">Pricing</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-purple-600">Analysis</div>
+                                <div class="text-sm text-gray-600">Best For</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-green-600">9/10</div>
+                                <div class="text-sm text-gray-600">Ease of Use</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <button onclick="trackClick('claude', 'https://claude.ai')" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                                    Try Claude →
+                                </button>
+                                <a href="office_ai_hub.html" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                                    Explore All Tools
+                                </a>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-600">Helpful?</span>
+                                <button onclick="voteOnTool('claude', 'like')" class="text-green-600 hover:text-green-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-up" id="claude-like-btn"></i>
+                                    <span id="claude-like-count" class="text-sm font-medium">187</span>
+                                </button>
+                                <button onclick="voteOnTool('claude', 'dislike')" class="text-red-600 hover:text-red-700 transition-colors flex items-center space-x-1">
+                                    <i class="fas fa-thumbs-down" id="claude-dislike-btn"></i>
+                                    <span id="claude-dislike-count" class="text-sm font-medium">3</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Reviews Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Quick Tool Reviews</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="quick-reviews">
+                <!-- Quick review cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Want More Detailed Reviews?</h2>
+            <p class="text-xl mb-8 opacity-90">Get access to our complete database of AI tool reviews with live data and user insights.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="office_ai_hub.html" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Explore All Tools
+                </a>
+                <a href="guides.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    Read Guides
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-3">
+                        <svg class="w-6 h-6 mr-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
+                            <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
+                            <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="45" x2="40" y2="45" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="55" x2="35" y2="55" stroke="#ccc" stroke-width="2"/>
+                            <line x1="20" y1="65" x2="45" y2="65" stroke="#ccc" stroke-width="2"/>
+                            <path d="M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z" fill="#666"/>
+                            <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
+                            <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
+                        </svg>
+                        <h3 class="text-lg font-bold">OfficeAIHub</h3>
+                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">Your professional directory of best AI tools for maximum workplace efficiency.</p>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold mb-3">AI Tool Categories</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="office_ai_hub.html#writing" class="text-gray-400 hover:text-white transition-colors text-sm">Writing Tools</a></li>
+                        <li><a href="office_ai_hub.html#design" class="text-gray-400 hover:text-white transition-colors text-sm">Design Tools</a></li>
+                        <li><a href="office_ai_hub.html#marketing" class="text-gray-400 hover:text-white transition-colors text-sm">Marketing Tools</a></li>
+                        <li><a href="office_ai_hub.html#office" class="text-gray-400 hover:text-white transition-colors text-sm">Office Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold mb-3">Resources</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-white transition-colors text-sm">Reviews</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors text-sm">Guides</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 OfficeAIHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced AI Tools Database with Real-time Analytics
+        let toolsData = {
+            'chatgpt': {
+                clicks: parseInt(localStorage.getItem('chatgpt_clicks')) || 1234,
+                dailyClicks: parseInt(localStorage.getItem('chatgpt_daily_clicks')) || 456,
+                likes: parseInt(localStorage.getItem('chatgpt_likes')) || 234,
+                dislikes: parseInt(localStorage.getItem('chatgpt_dislikes')) || 12,
+                userVoted: localStorage.getItem('chatgpt_user_vote') || null,
+                category: 'writing',
+                rating: 4.9,
+                dateAdded: new Date('2023-01-01'),
+                weeklyGrowth: 15,
+                lastUpdated: Date.now()
+            },
+            'midjourney': {
+                clicks: parseInt(localStorage.getItem('midjourney_clicks')) || 987,
+                dailyClicks: parseInt(localStorage.getItem('midjourney_daily_clicks')) || 345,
+                likes: parseInt(localStorage.getItem('midjourney_likes')) || 198,
+                dislikes: parseInt(localStorage.getItem('midjourney_dislikes')) || 8,
+                userVoted: localStorage.getItem('midjourney_user_vote') || null,
+                category: 'design',
+                rating: 4.8,
+                dateAdded: new Date('2023-02-15'),
+                weeklyGrowth: 8,
+                lastUpdated: Date.now()
+            },
+            'claude': {
+                clicks: parseInt(localStorage.getItem('claude_clicks')) || 756,
+                dailyClicks: parseInt(localStorage.getItem('claude_daily_clicks')) || 289,
+                likes: parseInt(localStorage.getItem('claude_likes')) || 187,
+                dislikes: parseInt(localStorage.getItem('claude_dislikes')) || 3,
+                userVoted: localStorage.getItem('claude_user_vote') || null,
+                category: 'writing',
+                rating: 4.8,
+                dateAdded: new Date('2024-01-10'),
+                weeklyGrowth: 22,
+                lastUpdated: Date.now()
+            },
+            'jasper': {
+                clicks: parseInt(localStorage.getItem('jasper_clicks')) || 456,
+                dailyClicks: parseInt(localStorage.getItem('jasper_daily_clicks')) || 123,
+                category: 'marketing',
+                rating: 4.7,
+                dateAdded: new Date('2023-06-01'),
+                weeklyGrowth: 5
+            },
+            'copilot': {
+                clicks: parseInt(localStorage.getItem('copilot_clicks')) || 342,
+                dailyClicks: parseInt(localStorage.getItem('copilot_daily_clicks')) || 98,
+                category: 'coding',
+                rating: 4.6,
+                dateAdded: new Date('2023-03-15'),
+                weeklyGrowth: 12
+            },
+            'grammarly': {
+                clicks: parseInt(localStorage.getItem('grammarly_clicks')) || 578,
+                dailyClicks: parseInt(localStorage.getItem('grammarly_daily_clicks')) || 167,
+                category: 'writing',
+                rating: 4.6,
+                dateAdded: new Date('2022-12-01'),
+                weeklyGrowth: 3
+            }
+        };
+
+        // Enhanced Analytics Functions
+        function trackClick(toolName, url) {
+            // Increment clicks
+            toolsData[toolName].clicks++;
+            toolsData[toolName].dailyClicks++;
+            toolsData[toolName].lastUpdated = Date.now();
+            
+            // Save to localStorage
+            localStorage.setItem(toolName + '_clicks', toolsData[toolName].clicks);
+            localStorage.setItem(toolName + '_daily_clicks', toolsData[toolName].dailyClicks);
+            localStorage.setItem(toolName + '_last_updated', toolsData[toolName].lastUpdated);
+            
+            // Update displays
+            updateToolStats(toolName);
+            updateGlobalStats();
+            updateTrendingBadges();
+            
+            // Show feedback
+            showClickFeedback(toolName);
+            
+            // Open URL
+            window.open(url, '_blank');
+            
+            // Simulate real-time update
+            broadcastUpdate(toolName, 'click');
+        }
+
+        function voteOnTool(toolName, voteType) {
+            const currentVote = toolsData[toolName].userVoted;
+            
+            // Remove previous vote
+            if (currentVote) {
+                if (currentVote === 'like') {
+                    toolsData[toolName].likes--;
+                } else {
+                    toolsData[toolName].dislikes--;
+                }
+            }
+            
+            // Add new vote or remove if same
+            if (currentVote === voteType) {
+                toolsData[toolName].userVoted = null;
+                localStorage.removeItem(toolName + '_user_vote');
+            } else {
+                if (voteType === 'like') {
+                    toolsData[toolName].likes++;
+                } else {
+                    toolsData[toolName].dislikes++;
+                }
+                toolsData[toolName].userVoted = voteType;
+                localStorage.setItem(toolName + '_user_vote', voteType);
+            }
+            
+            // Save votes
+            localStorage.setItem(toolName + '_likes', toolsData[toolName].likes);
+            localStorage.setItem(toolName + '_dislikes', toolsData[toolName].dislikes);
+            
+            // Update displays
+            updateToolStats(toolName);
+            updateVoteButtons(toolName);
+            updateGlobalStats();
+            
+            // Show feedback
+            showVoteFeedback(voteType);
+        }
+
+        function updateToolStats(toolName) {
+            // Update click counts
+            const clicksElement = document.getElementById(toolName + '-clicks');
+            if (clicksElement) {
+                clicksElement.textContent = `${toolsData[toolName].dailyClicks} clicks today`;
+            }
+            
+            // Update helpfulness percentage
+            const likesElement = document.getElementById(toolName + '-likes');
+            if (likesElement && toolsData[toolName].likes && toolsData[toolName].dislikes) {
+                const total = toolsData[toolName].likes + toolsData[toolName].dislikes;
+                const percentage = total > 0 ? Math.round((toolsData[toolName].likes / total) * 100) : 0;
+                likesElement.textContent = `👍 ${percentage}% helpful`;
+            }
+            
+            // Update growth indicators
+            const growthElement = document.getElementById(toolName + '-growth');
+            if (growthElement) {
+                const growth = toolsData[toolName].weeklyGrowth;
+                const color = growth > 10 ? 'bg-red-100 text-red-800' : 
+                             growth > 5 ? 'bg-green-100 text-green-800' : 
+                             'bg-blue-100 text-blue-800';
+                growthElement.className = `text-xs px-2 py-1 rounded-full font-medium ${color}`;
+                growthElement.textContent = `${growth > 0 ? '+' : ''}${growth}% this week`;
+            }
+            
+            // Update vote counts
+            const likeCountElement = document.getElementById(toolName + '-like-count');
+            const dislikeCountElement = document.getElementById(toolName + '-dislike-count');
+            
+            if (likeCountElement) likeCountElement.textContent = toolsData[toolName].likes;
+            if (dislikeCountElement) dislikeCountElement.textContent = toolsData[toolName].dislikes;
+        }
+
+        function updateVoteButtons(toolName) {
+            const likeBtn = document.getElementById(toolName + '-like-btn');
+            const dislikeBtn = document.getElementById(toolName + '-dislike-btn');
+            
+            if (!likeBtn || !dislikeBtn) return;
+            
+            const userVote = toolsData[toolName].userVoted;
+            
+            // Reset styles
+            likeBtn.className = 'fas fa-thumbs-up';
+            dislikeBtn.className = 'fas fa-thumbs-down';
+            
+            // Highlight voted button
+            if (userVote === 'like') {
+                likeBtn.className = 'fas fa-thumbs-up text-green-700';
+            } else if (userVote === 'dislike') {
+                dislikeBtn.className = 'fas fa-thumbs-down text-red-700';
+            }
+        }
+
+        function updateGlobalStats() {
+            // Calculate total daily clicks
+            const totalDailyClicks = Object.values(toolsData).reduce((sum, tool) => sum + (tool.dailyClicks || 0), 0);
+            document.getElementById('total-daily-clicks').textContent = totalDailyClicks.toLocaleString();
+            
+            // Find trending tool
+            const trending = Object.entries(toolsData).reduce((max, [name, data]) => 
+                (data.weeklyGrowth || 0) > (max.growth || 0) ? {name, growth: data.weeklyGrowth} : max, 
+                {name: 'ChatGPT', growth: 0}
+            );
+            document.getElementById('trending-tool').textContent = trending.name.charAt(0).toUpperCase() + trending.name.slice(1);
+            
+            // Calculate average satisfaction
+            let totalVotes = 0;
+            let totalLikes = 0;
+            Object.values(toolsData).forEach(tool => {
+                if (tool.likes && tool.dislikes) {
+                    totalVotes += tool.likes + tool.dislikes;
+                    totalLikes += tool.likes;
+                }
+            });
+            const avgSatisfaction = totalVotes > 0 ? Math.round((totalLikes / totalVotes) * 100) : 94;
+            document.getElementById('avg-satisfaction').textContent = `${avgSatisfaction}%`;
+            
+            // Simulate active users
+            const baseUsers = 1247;
+            const activeUsers = baseUsers + Math.floor(totalDailyClicks / 5);
+            document.getElementById('active-users').textContent = activeUsers.toLocaleString();
+        }
+
+        function updateTrendingBadges() {
+            // Sort tools by various metrics
+            const byClicks = Object.entries(toolsData).sort((a, b) => (b[1].dailyClicks || 0) - (a[1].dailyClicks || 0));
+            const byGrowth = Object.entries(toolsData).sort((a, b) => (b[1].weeklyGrowth || 0) - (a[1].weeklyGrowth || 0));
+            const byRating = Object.entries(toolsData).sort((a, b) => (b[1].rating || 0) - (a[1].rating || 0));
+            
+            // Update badges
+            byClicks.forEach(([toolName, data], index) => {
+                const badge = document.getElementById(toolName + '-badge');
+                if (badge) {
+                    if (index === 0) {
+                        badge.textContent = '🔥 #1 TRENDING';
+                        badge.className = 'trending-badge pulse-animation';
+                    } else if (data.weeklyGrowth > 15) {
+                        badge.textContent = '🚀 RISING FAST';
+                        badge.className = 'bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold';
+                    } else if (index === 1) {
+                        badge.textContent = '⭐ TOP RATED';
+                        badge.className = 'bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold';
+                    }
+                }
+            });
+        }
+
+        function showClickFeedback(toolName) {
+            const feedback = document.getElementById('clickFeedback');
+            feedback.querySelector('span').textContent = `${toolName.charAt(0).toUpperCase() + toolName.slice(1)} click tracked!`;
+            feedback.classList.add('show');
+            
+            setTimeout(() => {
+                feedback.classList.remove('show');
+            }, 3000);
+        }
+
+        function showVoteFeedback(voteType) {
+            const feedback = document.getElementById('clickFeedback');
+            feedback.querySelector('span').textContent = `${voteType === 'like' ? '👍' : '👎'} Vote recorded!`;
+            feedback.classList.add('show');
+            
+            setTimeout(() => {
+                feedback.classList.remove('show');
+            }, 2000);
+        }
+
+        function simulateRealTimeUpdates() {
+            setInterval(() => {
+                // Randomly update some tool stats
+                const tools = Object.keys(toolsData);
+                const randomTool = tools[Math.floor(Math.random() * tools.length)];
+                
+                if (Math.random() < 0.2) { // 20% chance every 15 seconds
+                    const increment = Math.floor(Math.random() * 3) + 1;
+                    toolsData[randomTool].dailyClicks += increment;
+                    toolsData[randomTool].clicks += increment;
+                    
+                    updateToolStats(randomTool);
+                    updateGlobalStats();
+                    updateTrendingBadges();
+                }
+            }, 15000); // Every 15 seconds
+        }
+
+        function broadcastUpdate(toolName, action) {
+            // Simulate real-time update notification
+            console.log(`📊 Real-time update: ${toolName} ${action} tracked`);
+        }
+
+        // Filter and Sort Functions
+        function filterTools(category) {
+            const reviewCards = document.querySelectorAll('[data-tool]');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update active filter button
+            filterBtns.forEach(btn => {
+                btn.className = 'filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors';
+                if (btn.getAttribute('onclick').includes(category)) {
+                    btn.className = 'filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors';
+                }
+            });
+            
+            // Show/hide tools
+            reviewCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+
+        function sortTools(sortBy) {
+            const featuredContainer = document.getElementById('featured-reviews');
+            const featuredCards = Array.from(featuredContainer.children);
+            
+            featuredCards.sort((a, b) => {
+                const toolA = a.dataset.tool;
+                const toolB = b.dataset.tool;
+                
+                switch(sortBy) {
+                    case 'popularity':
+                        return (toolsData[toolB].dailyClicks || 0) - (toolsData[toolA].dailyClicks || 0);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'recent':
+                        return (toolsData[toolB].dateAdded || 0) - (toolsData[toolA].dateAdded || 0);
+                    case 'engagement':
+                        const engagementA = (toolsData[toolA].likes || 0) + (toolsData[toolA].dislikes || 0);
+                        const engagementB = (toolsData[toolB].likes || 0) + (toolsData[toolB].dislikes || 0);
+                        return engagementB - engagementA;
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Reorder cards
+            featuredCards.forEach(card => featuredContainer.appendChild(card));
+            updateTrendingBadges();
+        }
+
+        // Initialize page
+        function initializePage() {
+            // Create quick reviews
+            const quickReviewsContainer = document.getElementById('quick-reviews');
+            const quickReviewTools = ['jasper', 'copilot', 'grammarly'];
+            
+            quickReviewsContainer.innerHTML = quickReviewTools.map(toolName => `
+                <div class="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300" data-tool="${toolName}">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">${toolName.charAt(0).toUpperCase() + toolName.slice(1)}</h3>
+                        <div class="text-lg star-rating">★★★★☆ ${toolsData[toolName].rating}</div>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-orange-600 font-semibold">Paid</span>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs text-gray-500">${toolsData[toolName].dailyClicks} clicks today</span>
+                            <span class="text-xs text-gray-500">👍 85%</span>
+                        </div>
+                    </div>
+                    <button onclick="trackClick('${toolName}', '#')" class="w-full text-blue-600 hover:text-blue-700 font-medium py-2 px-4 border border-blue-300 rounded-lg hover:bg-blue-50 transition-colors">
+                        Try ${toolName.charAt(0).toUpperCase() + toolName.slice(1)} →
+                    </button>
+                </div>
+            `).join('');
+            
+            // Update all tool stats
+            Object.keys(toolsData).forEach(toolName => {
+                updateToolStats(toolName);
+                updateVoteButtons(toolName);
+            });
+            
+            // Update global stats
+            updateGlobalStats();
+            updateTrendingBadges();
+            
+            // Start real-time simulation
+            simulateRealTimeUpdates();
+            
+            console.log('🚀 Enhanced Reviews Page with Real-time Analytics Loaded!');
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
