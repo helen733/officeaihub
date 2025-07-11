@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
     <title>OfficeAIHub - Best Professional AI Tools for Maximum Workplace Efficiency 2025</title>
     <meta name="description" content="Best professional AI tools for maximum workplace efficiency. Find top-rated AI writing assistants, design generators, marketing automation, and office tools. Compare features, pricing, and reviews.">
     <meta name="keywords" content="best AI tools 2025, professional AI software, workplace efficiency, AI productivity tools, ChatGPT alternatives, Midjourney, Canva AI, marketing automation, design AI tools, presentation maker, voice clone, video generator, maximum efficiency">
@@ -456,7 +457,7 @@
                         </div>
                         
                         <!-- Logged In Status (hidden by default) -->
-                        <div id="loggedInStatus" class="hidden flex items-center space-x-4">
+                        <div id="loggedInStatus" class="hidden items-center space-x-4">
                             <div class="user-status">
                                 <div class="user-avatar" id="userAvatar"></div>
                                 <span id="userEmail" class="text-sm text-gray-700 dark:text-gray-300"></span>
@@ -592,6 +593,7 @@
                         class="w-full px-4 py-3 pr-16 border border-gray-300 dark:border-gray-600 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
                         placeholder="Search AI tools: write emails, generate images, create videos..."
                         onkeydown="handleSearchKeydown(event)"
+                        title="Search for AI tools"
                     />
                     <button
                         type="submit"
@@ -627,9 +629,9 @@
                     <p class="text-gray-600 dark:text-gray-400 mt-1">Top-rated AI tools that professionals love</p>
                 </div>
                 <div class="flex space-x-2">
-                    <button class="px-3 py-1.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm">Featured</button>
-                    <button class="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm">Most Popular</button>
-                    <button class="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm">New</button>
+                    <button onclick="filterFeaturedTools('featured')" class="px-3 py-1.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm" id="featured-btn">Featured</button>
+                    <button onclick="filterFeaturedTools('popular')" class="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm" id="popular-btn">Most Popular</button>
+                    <button onclick="filterFeaturedTools('new')" class="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm" id="new-btn">New</button>
                 </div>
             </div>
             <div class="tools-grid" id="featuredTools">
@@ -980,12 +982,12 @@
                 <div>
                     <h4 class="text-base font-semibold mb-3">Resources</h4>
                     <ul class="space-y-1.5">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">About OfficeAIHub</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">AI Tool Reviews</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">How-to Guides</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About OfficeAIHub</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-white transition-colors text-sm">AI Tool Reviews</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors text-sm">How-to Guides</a></li>
+                        <li><a href="#" onclick="openContactModal()" class="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer">Contact Us</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -999,6 +1001,63 @@
     <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div id="modalContent" class="relative">
             <!-- Modal content will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-md mx-4 relative">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">Contact Us</h2>
+                <button onclick="closeContactModal()" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Enter your name" title="Please enter your name">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                    <input type="email" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="your.email@example.com" title="Please enter a valid email address">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                    <select required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" title="Please select a topic">
+                        <option value="">Select a topic</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="tool-suggestion">Tool Suggestion</option>
+                        <option value="partnership">Partnership/Collaboration</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="technical">Technical Issue</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                    <textarea required rows="4" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Tell us how we can help you..." title="Please enter your message"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Send Message
+                </button>
+            </form>
+            
+            <div id="contactSuccess" class="hidden bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mt-4">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-600 dark:text-green-400 mr-3"></i>
+                    <div>
+                        <h4 class="text-green-800 dark:text-green-200 font-medium">Message Sent!</h4>
+                        <p class="text-green-700 dark:text-green-300 text-sm">Thanks for reaching out. We'll get back to you soon!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1827,14 +1886,14 @@
                         <img 
                             src="https://image.thum.io/get/width/600/crop/400/${tool.url}" 
                             alt="${tool.name} Screenshot" 
-                            class="w-full h-32 object-cover rounded-lg mb-2.5 screenshot-hover" 
+                            class="w-full h-32 object-cover rounded-lg mb-2.5 screenshot-hover cursor-pointer" 
                             loading="lazy"
                             title="Click to visit ${tool.name}"
-                            onclick="window.open('${tool.url}', '_blank')"
+                            onclick="window.open('${tool.url}', '_blank'); event.stopPropagation();"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                         />
                         <!-- Fallback when image fails to load -->
-                        <div class="w-full h-32 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-lg mb-2.5 flex items-center justify-center screenshot-hover" style="display: none;" onclick="window.open('${tool.url}', '_blank')">
+                        <div class="w-full h-32 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-lg mb-2.5 flex items-center justify-center screenshot-hover cursor-pointer" style="display: none;" onclick="window.open('${tool.url}', '_blank'); event.stopPropagation();">
                             <div class="text-center">
                                 <div class="text-2xl mb-1">${tool.name.charAt(0)}</div>
                                 <div class="text-xs text-gray-600 dark:text-gray-400">Visit ${tool.name}</div>
@@ -1893,17 +1952,330 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // Modal functionality
+        function openModal(type) {
+            const modal = document.getElementById('authModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            let content = '';
+            
+            if (type === 'signin') {
+                content = `
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-md mx-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sign In</h2>
+                            <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-lg"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Google Sign In Button -->
+                        <button class="google-button mb-4" onclick="handleGoogleSignIn()">
+                            <svg class="google-icon" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            Continue with Google
+                        </button>
+                        
+                        <div class="divider">
+                            <span class="px-2 text-gray-500 dark:text-gray-400 text-sm">or</span>
+                        </div>
+                        
+                        <!-- Email Sign In Form -->
+                        <form onsubmit="handleEmailSignIn(event)">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                                <input type="email" required class="modal-input w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Enter your email" title="Please enter a valid email address">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                                <input type="password" required class="modal-input w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Enter your password" title="Please enter your password">
+                            </div>
+                            <button type="submit" class="modal-button w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Sign In
+                            </button>
+                        </form>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Don't have an account? 
+                                <button onclick="openModal('signup')" class="text-blue-600 hover:text-blue-700 font-medium">Sign up</button>
+                            </p>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'signup') {
+                content = `
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-md mx-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sign Up</h2>
+                            <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-lg"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Google Sign Up Button -->
+                        <button class="google-button mb-4" onclick="handleGoogleSignUp()">
+                            <svg class="google-icon" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            Continue with Google
+                        </button>
+                        
+                        <div class="divider">
+                            <span class="px-2 text-gray-500 dark:text-gray-400 text-sm">or</span>
+                        </div>
+                        
+                        <!-- Email Sign Up Form -->
+                        <form onsubmit="handleEmailSignUp(event)">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" required class="modal-input w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Enter your full name" title="Please enter your full name">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                                <input type="email" required class="modal-input w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Enter your email" title="Please enter a valid email address">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                                <input type="password" required class="modal-input w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Create a password" title="Please create a password">
+                            </div>
+                            <button type="submit" class="modal-button w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Create Account
+                            </button>
+                        </form>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Already have an account? 
+                                <button onclick="openModal('signin')" class="text-blue-600 hover:text-blue-700 font-medium">Sign in</button>
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Apply validation messages to new modal content
+            setTimeout(() => {
+                setCustomValidationMessages();
+            }, 100);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('authModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
         // Handle Sign In and Sign Up Functions
         function handleSignIn() {
-            alert('Sign In feature is available! This would connect to the authentication system.');
+            openModal('signin');
         }
 
         function handleSignUp() {
-            alert('Sign Up feature is available! This would create a new account.');
+            openModal('signup');
+        }
+
+        function handleGoogleSignIn() {
+            // Use Supabase OAuth endpoint for Google authentication
+            const supabaseUrl = 'https://ftbwofwxqvezjogiexme.supabase.co';
+            const redirectTo = encodeURIComponent(window.location.origin);
+            
+            // Construct Supabase OAuth URL for Google
+            const supabaseOAuthUrl = `${supabaseUrl}/auth/v1/authorize?` +
+                `provider=google&` +
+                `redirect_to=${redirectTo}`;
+            
+            // Redirect to Supabase OAuth
+            window.location.href = supabaseOAuthUrl;
+        }
+
+        function handleGoogleSignUp() {
+            // Use Supabase OAuth endpoint for Google authentication  
+            const supabaseUrl = 'https://ftbwofwxqvezjogiexme.supabase.co';
+            const redirectTo = encodeURIComponent(window.location.origin);
+            
+            // Construct Supabase OAuth URL for Google
+            const supabaseOAuthUrl = `${supabaseUrl}/auth/v1/authorize?` +
+                `provider=google&` +
+                `redirect_to=${redirectTo}`;
+            
+            // Redirect to Supabase OAuth
+            window.location.href = supabaseOAuthUrl;
+        }
+
+        // Simulate successful login for demo
+        function simulateSuccessfulLogin(email, name) {
+            // Update UI to show logged in state
+            const guestStatus = document.getElementById('guestStatus');
+            const loggedInStatus = document.getElementById('loggedInStatus');
+            const mobileGuestStatus = document.getElementById('mobileGuestStatus');
+            const mobileLoggedInStatus = document.getElementById('mobileLoggedInStatus');
+            
+            // Desktop
+            if (guestStatus) guestStatus.classList.add('hidden');
+            if (loggedInStatus) {
+                loggedInStatus.classList.remove('hidden');
+                loggedInStatus.classList.add('flex');
+            }
+            
+            // Mobile
+            if (mobileGuestStatus) mobileGuestStatus.classList.add('hidden');
+            if (mobileLoggedInStatus) mobileLoggedInStatus.classList.remove('hidden');
+            
+            // Update user info
+            const userEmail = document.getElementById('userEmail');
+            const userAvatar = document.getElementById('userAvatar');
+            const mobileUserEmail = document.getElementById('mobileUserEmail');
+            const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+            
+            if (userEmail) userEmail.textContent = email;
+            if (userAvatar) userAvatar.textContent = name.charAt(0).toUpperCase();
+            if (mobileUserEmail) mobileUserEmail.textContent = email;
+            if (mobileUserAvatar) mobileUserAvatar.textContent = name.charAt(0).toUpperCase();
+            
+            // Show success message
+            setTimeout(() => {
+                alert(`Welcome back, ${name}! You are now signed in.`);
+            }, 100);
+        }
+
+        function handleEmailSignIn(event) {
+            event.preventDefault();
+            const form = event.target;
+            const email = form.querySelector('input[type="email"]').value;
+            const password = form.querySelector('input[type="password"]').value;
+            
+            // Simulate email sign in validation
+            if (email && password) {
+                // In production, this would make an API call to your backend
+                setTimeout(() => {
+                    const userName = email.split('@')[0].replace(/[^a-zA-Z]/g, '') || 'User';
+                    simulateSuccessfulLogin(email, userName);
+                    closeModal();
+                }, 500);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        function handleEmailSignUp(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const password = form.querySelector('input[type="password"]').value;
+            
+            // Simulate email sign up validation
+            if (name && email && password) {
+                // In production, this would make an API call to your backend
+                setTimeout(() => {
+                    simulateSuccessfulLogin(email, name);
+                    closeModal();
+                }, 500);
+            } else {
+                alert('Please fill in all fields.');
+            }
         }
 
         function handleLogout() {
-            alert('Logout feature is available! This would sign out the user.');
+            // Reset UI to guest state
+            const guestStatus = document.getElementById('guestStatus');
+            const loggedInStatus = document.getElementById('loggedInStatus');
+            const mobileGuestStatus = document.getElementById('mobileGuestStatus');
+            const mobileLoggedInStatus = document.getElementById('mobileLoggedInStatus');
+            
+            // Desktop
+            if (guestStatus) guestStatus.classList.remove('hidden');
+            if (loggedInStatus) loggedInStatus.classList.add('hidden');
+            
+            // Mobile
+            if (mobileGuestStatus) mobileGuestStatus.classList.remove('hidden');
+            if (mobileLoggedInStatus) mobileLoggedInStatus.classList.add('hidden');
+            
+            // Clear user info
+            const userEmail = document.getElementById('userEmail');
+            const userAvatar = document.getElementById('userAvatar');
+            const mobileUserEmail = document.getElementById('mobileUserEmail');
+            const mobileUserAvatar = document.getElementById('mobileUserAvatar');
+            
+            if (userEmail) userEmail.textContent = '';
+            if (userAvatar) userAvatar.textContent = '';
+            if (mobileUserEmail) mobileUserEmail.textContent = '';
+            if (mobileUserAvatar) mobileUserAvatar.textContent = '';
+            
+            alert('You have been successfully logged out. Thank you for using OfficeAIHub!');
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const authModal = document.getElementById('authModal');
+            const contactModal = document.getElementById('contactModal');
+            
+            if (event.target === authModal) {
+                closeModal();
+            }
+            
+            if (event.target === contactModal) {
+                closeContactModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+                closeContactModal();
+            }
+        });
+
+        // Contact Modal Functions
+        function openContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Apply validation messages to contact form
+            setTimeout(() => {
+                setCustomValidationMessages();
+            }, 100);
+        }
+
+        function closeContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            
+            // Reset form and hide success message
+            document.getElementById('contactForm').reset();
+            document.getElementById('contactSuccess').classList.add('hidden');
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Hide form and show success message
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('contactSuccess').classList.remove('hidden');
+                
+                // Auto close after 3 seconds
+                setTimeout(() => {
+                    closeContactModal();
+                    document.getElementById('contactForm').style.display = 'block';
+                }, 3000);
+            }, 500);
         }
 
         function populateSection(elementId, section) {
@@ -1932,8 +2304,113 @@
             // Initialize all tool sections
             initializePage();
             
+            // Set custom validation messages for all forms
+            setCustomValidationMessages();
+            
             console.log('✅ OfficeAIHub loaded with 60+ AI tools!');
         });
+
+        // Set custom English validation messages
+        function setCustomValidationMessages() {
+            const inputs = document.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('invalid', function(e) {
+                    if (input.validity.valueMissing) {
+                        if (input.type === 'email') {
+                            input.setCustomValidity('Please enter your email address');
+                        } else if (input.type === 'password') {
+                            input.setCustomValidity('Please enter your password');
+                        } else if (input.tagName === 'SELECT') {
+                            input.setCustomValidity('Please select an option');
+                        } else if (input.tagName === 'TEXTAREA') {
+                            input.setCustomValidity('Please enter your message');
+                        } else if (input.placeholder && input.placeholder.includes('name')) {
+                            input.setCustomValidity('Please enter your name');
+                        } else {
+                            input.setCustomValidity('Please fill out this field');
+                        }
+                    } else if (input.validity.typeMismatch && input.type === 'email') {
+                        input.setCustomValidity('Please enter a valid email address');
+                    } else if (input.validity.tooShort) {
+                        input.setCustomValidity('Please enter at least ' + input.minLength + ' characters');
+                    } else if (input.validity.tooLong) {
+                        input.setCustomValidity('Please enter no more than ' + input.maxLength + ' characters');
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    input.setCustomValidity('');
+                });
+                
+                input.addEventListener('change', function() {
+                    input.setCustomValidity('');
+                });
+            });
+        }
+
+        // Filter featured tools by category
+        function filterFeaturedTools(filterType) {
+            console.log('Filter clicked:', filterType);
+            const container = document.getElementById('featuredTools');
+            if (!container) {
+                console.error('Featured tools container not found');
+                return;
+            }
+
+            let toolsToShow = [];
+
+            switch(filterType) {
+                case 'featured':
+                    toolsToShow = aiTools.filter(tool => tool.section === 'featured');
+                    break;
+                case 'popular':
+                    // Sort all tools by rating (highest first)
+                    toolsToShow = aiTools
+                        .filter(tool => tool.section === 'featured')
+                        .sort((a, b) => b.rating - a.rating)
+                        .slice(0, 8);
+                    break;
+                case 'new':
+                    // Show newest tools (reverse order simulates newest first)
+                    toolsToShow = aiTools
+                        .filter(tool => tool.section === 'featured')
+                        .reverse()
+                        .slice(0, 8);
+                    break;
+            }
+
+            console.log('Tools to show:', toolsToShow.length);
+
+            // Update the grid
+            container.innerHTML = toolsToShow.map(tool => createToolCard(tool)).join('');
+
+            // Update button states
+            updateFilterButtons(filterType);
+        }
+
+        // Update button active states
+        function updateFilterButtons(activeFilter) {
+            const buttons = ['featured-btn', 'popular-btn', 'new-btn'];
+            const filterMap = {
+                'featured': 'featured-btn',
+                'popular': 'popular-btn', 
+                'new': 'new-btn'
+            };
+
+            buttons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    if (btnId === filterMap[activeFilter]) {
+                        // Active state
+                        btn.className = 'px-3 py-1.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm';
+                    } else {
+                        // Inactive state
+                        btn.className = 'px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-sm';
+                    }
+                }
+            });
+        }
     </script>
 </body>
 </html>
