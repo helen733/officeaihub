@@ -1,44 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About OfficeAIHub - AI Tools Platform</title>
-    <meta name="description" content="Learn about OfficeAIHub, your trusted source for discovering the best AI tools for writing, design, productivity, and business automation.">
+    <title>About OfficeAIHub - Professional AI Tools Directory for Maximum Workplace Efficiency</title>
+    <meta name="description" content="Learn about OfficeAIHub, your trusted professional directory of carefully curated AI tools for workplace efficiency. Discover our mission to help professionals find the highest-quality AI solutions for writing, design, marketing, and office automation.">
+    <meta name="keywords" content="about OfficeAIHub, AI tools directory, workplace efficiency, professional AI tools, AI solutions, productivity tools">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='20' width='60' height='70' rx='8' fill='none' stroke='%23666' stroke-width='3'/%3E%3Crect x='25' y='10' width='20' height='8' rx='2' fill='%23666'/%3E%3Cline x1='20' y1='35' x2='50' y2='35' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='45' x2='40' y2='45' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='55' x2='35' y2='55' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='65' x2='45' y2='65' stroke='%23ccc' stroke-width='2'/%3E%3Cpath d='M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z' fill='%23666'/%3E%3Crect x='55' y='40' width='35' height='25' rx='5' fill='none' stroke='%2300C896' stroke-width='3'/%3E%3Ctext x='72.5' y='58' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%2300C896'%3EAI%3C/text%3E%3C/svg%3E">
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="OfficeAIHub">
+    <meta name="language" content="en">
+    <link rel="canonical" href="https://www.officeaihub.com/about">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About OfficeAIHub - Professional AI Tools Directory" />
+    <meta property="og:description" content="Your trusted professional directory of carefully curated AI tools for maximum workplace efficiency. Helping professionals discover the highest-quality AI solutions." />
+    <meta property="og:url" content="https://www.officeaihub.com/about" />
+    <meta property="og:type" content="website" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About OfficeAIHub",
+      "description": "Professional directory of AI tools for maximum workplace efficiency",
+      "url": "https://www.officeaihub.com/about",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "OfficeAIHub",
+        "description": "Professional directory of carefully curated AI tools for workplace efficiency",
+        "url": "https://www.officeaihub.com",
+        "foundingDate": "2024",
+        "mission": "To help professionals discover and leverage the highest-quality AI tools for maximum workplace efficiency"
+      }
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * { font-family: 'Inter', sans-serif; }
         
-        * {
-            font-family: 'Inter', sans-serif;
+        .card-hover {
+            transition: all 0.3s ease;
         }
         
-        .dark {
-            color-scheme: dark;
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = localStorage.getItem('darkMode') === 'true' || false; $watch('darkMode', val => { localStorage.setItem('darkMode', val); if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <!-- Logo Icon -->
+                    <a href="index.html" class="flex items-center">
                         <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
                             <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
@@ -50,148 +78,233 @@
                             <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
                             <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
                         </svg>
-                        <a href="./" class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</a>
-                    </div>
+                        <h1 class="text-2xl font-bold text-gray-900">OfficeAIHub</h1>
+                    </a>
                 </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="./" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Home</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
                     <a href="about.html" class="text-blue-600 font-medium">About</a>
-                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Contact</a>
-                    <a href="privacy.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Privacy</a>
-                    <a href="terms.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Terms</a>
-                    
-                    <!-- Dark Mode Toggle -->
-                    <button 
-                        @click="darkMode = !darkMode"
-                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                        title="Toggle dark mode"
-                    >
-                        <i x-show="!darkMode" class="fas fa-moon"></i>
-                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
-                    </button>
+                    <a href="reviews.html" class="text-gray-700 hover:text-blue-600 transition-colors">Reviews</a>
+                    <a href="guides.html" class="text-gray-700 hover:text-blue-600 transition-colors">Guides</a>
                 </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <button 
-                        @click="darkMode = !darkMode"
-                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                    >
-                        <i x-show="!darkMode" class="fas fa-moon"></i>
-                        <i x-show="darkMode" class="fas fa-sun text-yellow-400"></i>
-                    </button>
-                    
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700 dark:text-gray-300 hover:text-blue-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-            <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="./" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-blue-600 font-medium">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Contact</a>
-                <a href="privacy.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Privacy</a>
-                <a href="terms.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Terms</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="min-h-screen">
-        <!-- Page Header -->
-        <section class="bg-gray-50 dark:bg-gray-800 py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">About OfficeAIHub</h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Your trusted guide to discovering the most powerful AI tools for modern workplace productivity</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">About OfficeAIHub</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+                Your trusted professional directory for discovering the best AI tools to maximize workplace efficiency
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">🎯 Quality Focused</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">✅ Honest Reviews</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">📈 Regular Updates</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">💼 Professional Focus</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Content -->
-        <section class="py-16">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="prose prose-lg max-w-none dark:prose-invert">
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h2>
-                        <p class="text-gray-600 dark:text-gray-300 mb-6">OfficeAIHub is a curated platform dedicated to exploring the best AI tools for writing, design, productivity, and business automation. We help creators, solopreneurs, and teams discover the right tools through unbiased reviews and use-case breakdowns.</p>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 mb-6">In today's rapidly evolving digital landscape, artificial intelligence has become an essential component of modern workflows. Our team of experts rigorously tests and evaluates AI tools across multiple categories to bring you authentic, practical insights that help you make informed decisions.</p>
-                        
-                        <p class="text-gray-600 dark:text-gray-300">We partner with top-tier AI companies through affiliate programs to support our content operations while staying objective in our recommendations. Our commitment is to provide honest, valuable guidance that genuinely improves your productivity and creative output.</p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
-                            <div class="flex items-center mb-3">
-                                <i class="fas fa-search text-blue-600 text-xl mr-3"></i>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Rigorous Testing</h3>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-300">Every tool undergoes comprehensive evaluation across multiple use cases and scenarios to ensure practical value.</p>
+    <!-- Mission Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        At OfficeAIHub, we believe that artificial intelligence should empower professionals to work smarter, not harder. Our mission is to bridge the gap between cutting-edge AI technology and practical workplace applications.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        We curate and review the most effective AI tools across writing, design, marketing, office automation, video creation, and coding to help you find the perfect solutions for your specific needs.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">🎯</div>
+                            <div class="text-sm text-gray-600">Quality Over Quantity</div>
                         </div>
-                        
-                        <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
-                            <div class="flex items-center mb-3">
-                                <i class="fas fa-users text-green-600 text-xl mr-3"></i>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Community Driven</h3>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-300">Our recommendations are based on real user feedback and hands-on experience from our expert community.</p>
-                        </div>
-                        
-                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6">
-                            <div class="flex items-center mb-3">
-                                <i class="fas fa-chart-line text-purple-600 text-xl mr-3"></i>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Data-Driven Insights</h3>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-300">We analyze performance metrics, user satisfaction, and ROI to provide objective tool comparisons.</p>
-                        </div>
-                        
-                        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-6">
-                            <div class="flex items-center mb-3">
-                                <i class="fas fa-sync text-orange-600 text-xl mr-3"></i>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Always Updated</h3>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-300">Our database is continuously updated with the latest AI tools and feature updates to keep you informed.</p>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">⚡</div>
+                            <div class="text-sm text-gray-600">Efficiency Focused</div>
                         </div>
                     </div>
-                    
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">What We Cover</h2>
-                        <div class="grid md:grid-cols-2 gap-6">
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Why Choose OfficeAIHub?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">✍️ Writing & Content</h4>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI writing assistants, content generators, grammar checkers, and copywriting tools.</p>
-                                
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">🎨 Design & Creative</h4>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm">Image generators, graphic design platforms, video editors, and creative automation tools.</p>
+                                <h4 class="font-semibold text-gray-900">Curated Selection</h4>
+                                <p class="text-gray-600 text-sm">Hand-picked AI tools tested for real-world effectiveness</p>
                             </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">📊 Office & Productivity</h4>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Presentation makers, meeting assistants, workflow automation, and scheduling tools.</p>
-                                
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">📈 Marketing & Business</h4>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm">SEO tools, social media managers, analytics platforms, and customer service automation.</p>
+                                <h4 class="font-semibold text-gray-900">Honest Reviews</h4>
+                                <p class="text-gray-600 text-sm">Unbiased ratings and detailed feature comparisons</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Regular Updates</h4>
+                                <p class="text-gray-600 text-sm">Daily updates with the latest AI innovations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Professional Focus</h4>
+                                <p class="text-gray-600 text-sm">Tools specifically chosen for workplace efficiency</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Story</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    OfficeAIHub was born from a simple observation: while AI tools were revolutionizing industries, professionals were struggling to find the right solutions for their specific needs. With new AI tools launching constantly, the choice paralysis was real.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Our team of productivity experts, AI researchers, and workplace consultants came together with a shared vision: create a trusted resource where professionals could discover, compare, and learn about AI tools that actually deliver results.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Today, OfficeAIHub serves professionals worldwide, from solo entrepreneurs to established companies, helping them navigate the AI landscape and implement tools that truly enhance their productivity and creativity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Values -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Transparency</h3>
+                    <p class="text-gray-600">We provide honest, unbiased reviews and clearly disclose any partnerships or affiliations.</p>
+                </div>
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community</h3>
+                    <p class="text-gray-600">We build a community of professionals sharing experiences and best practices with AI tools.</p>
+                </div>
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">We stay at the forefront of AI developments to bring you the latest and most effective tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Approach</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Deep Research</h4>
+                    <p class="text-gray-600 text-sm">We thoroughly test each AI tool in real workplace scenarios before recommending it to professionals.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Quality Selection</h4>
+                    <p class="text-gray-600 text-sm">Only the most effective and reliable AI tools make it to our curated directory.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Professional Focus</h4>
+                    <p class="text-gray-600 text-sm">Every tool is evaluated specifically for its impact on workplace productivity and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Professionals Choose OfficeAIHub</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-filter text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Carefully Curated</h3>
+                    <p class="text-gray-600 text-sm">Every AI tool is hand-selected and tested for real workplace effectiveness</p>
+                </div>
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Save Time</h3>
+                    <p class="text-gray-600 text-sm">No need to test dozens of tools - we've done the research for you</p>
+                </div>
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Trusted Reviews</h3>
+                    <p class="text-gray-600 text-sm">Honest, unbiased evaluations based on real professional use cases</p>
+                </div>
+                <div class="text-center card-hover bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Proven Results</h3>
+                    <p class="text-gray-600 text-sm">Focus on tools that deliver measurable productivity improvements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Maximize Your Workplace Efficiency?</h2>
+            <p class="text-xl mb-8 opacity-90">Join thousands of professionals who trust OfficeAIHub to discover the best AI tools for their needs.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Explore AI Tools
+                </a>
+                <a href="guides.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    View Guides
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 mr-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex items-center mb-3">
+                        <svg class="w-6 h-6 mr-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" y="20" width="60" height="70" rx="8" fill="none" stroke="#666" stroke-width="3"/>
                             <rect x="25" y="10" width="20" height="8" rx="2" fill="#666"/>
                             <line x1="20" y1="35" x2="50" y2="35" stroke="#ccc" stroke-width="2"/>
@@ -202,42 +315,29 @@
                             <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
                             <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
                         </svg>
-                        <h3 class="text-xl font-bold">OfficeAIHub</h3>
+                        <h3 class="text-lg font-bold">OfficeAIHub</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Discover the most powerful AI tools to enhance your workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                    </div>
+                    <p class="text-gray-400 mb-3 text-sm">Your professional directory of best AI tools for maximum workplace efficiency.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
-                    <ul class="space-y-2">
-                        <li><a href="./#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
-                        <li><a href="./#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
-                        <li><a href="./#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
-                        <li><a href="./#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
+                    <h4 class="text-base font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-white transition-colors text-sm">Reviews</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors text-sm">Guides</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Pages</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    <h4 class="text-base font-semibold mb-3">Contact</h4>
+                    <ul class="space-y-1.5">
+                        <li class="text-gray-400 text-sm">officeaihub@gmail.com</li>
+                        <li class="text-gray-400 text-sm">Response within 24 hours</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 OfficeAIHub. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 OfficeAIHub. All rights reserved.</p>
             </div>
         </div>
     </footer>
