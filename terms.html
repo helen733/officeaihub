@@ -1,13 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - OfficeAIHub</title>
-    <meta name="description" content="Read OfficeAIHub's terms of service to understand the rules and guidelines for using our AI tools directory platform.">
+    <title>Terms of Service - OfficeAIHub | Best Professional AI Tools 2025</title>
+    <meta name="description" content="Read OfficeAIHub's terms of service to understand the rules and regulations for using our professional AI tool recommendation platform and affiliate partnerships.">
+    <meta name="keywords" content="terms of service, professional AI tools, affiliate disclosure, OfficeAIHub terms, AI tool recommendations, workplace efficiency, legal terms">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='20' width='60' height='70' rx='8' fill='none' stroke='%23666' stroke-width='3'/%3E%3Crect x='25' y='10' width='20' height='8' rx='2' fill='%23666'/%3E%3Cline x1='20' y1='35' x2='50' y2='35' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='45' x2='40' y2='45' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='55' x2='35' y2='55' stroke='%23ccc' stroke-width='2'/%3E%3Cline x1='20' y1='65' x2='45' y2='65' stroke='%23ccc' stroke-width='2'/%3E%3Cpath d='M10 35 L20 25 L20 30 L25 25 L25 35 L20 40 L20 45 L10 35 Z' fill='%23666'/%3E%3Crect x='55' y='40' width='35' height='25' rx='5' fill='none' stroke='%2300C896' stroke-width='3'/%3E%3Ctext x='72.5' y='58' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%2300C896'%3EAI%3C/text%3E%3C/svg%3E">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms of Service - OfficeAIHub Professional AI Tools" />
+    <meta property="og:description" content="Professional terms of service for OfficeAIHub's AI tool recommendations and affiliate partnerships." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.officeaihub.com/terms.html" />
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
@@ -29,11 +37,15 @@
         .dark {
             color-scheme: dark;
         }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-900">
     <!-- Navigation -->
-    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = localStorage.getItem('darkMode') === 'true' || false; $watch('darkMode', val => { localStorage.setItem('darkMode', val); if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
+    <nav class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false, darkMode: false }" x-init="darkMode = false; $watch('darkMode', val => { if(val) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
@@ -50,17 +62,13 @@
                             <rect x="55" y="40" width="35" height="25" rx="5" fill="none" stroke="#00C896" stroke-width="3"/>
                             <text x="72.5" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00C896">AI</text>
                         </svg>
-                        <a href="./" class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</a>
+                        <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">OfficeAIHub</a>
                     </div>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="./" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">About</a>
-                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Contact</a>
-                    <a href="privacy.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">Privacy</a>
-                    <a href="terms.html" class="text-blue-600 font-medium">Terms</a>
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">← Back to Home</a>
                     
                     <!-- Dark Mode Toggle -->
                     <button 
@@ -93,11 +101,7 @@
         <!-- Mobile Menu -->
         <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="./" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Contact</a>
-                <a href="privacy.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">Privacy</a>
-                <a href="terms.html" class="block px-3 py-2 text-blue-600 font-medium">Terms</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600">← Back to Home</a>
             </div>
         </div>
     </nav>
@@ -105,105 +109,360 @@
     <!-- Main Content -->
     <main class="min-h-screen">
         <!-- Page Header -->
-        <section class="bg-gray-50 dark:bg-gray-800 py-16">
+        <section class="gradient-bg py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Terms of Service</h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Please read these terms carefully before using our AI tools directory platform</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">Last updated: January 10, 2025</p>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Terms of Service</h1>
+                    <p class="text-xl text-white/90 max-w-3xl mx-auto">Terms and conditions for using OfficeAIHub's professional AI tool recommendations and affiliate partnerships</p>
+                    <p class="text-white/75 mt-4">Last updated: January 11, 2025</p>
                 </div>
             </div>
         </section>
 
         <!-- Terms Content -->
-        <section class="py-16">
+        <section class="py-20">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="prose prose-lg max-w-none dark:prose-invert">
+                
+                <!-- Introduction -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-handshake text-blue-600 mr-3"></i>
+                        Agreement to Terms
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 text-lg">
+                        These Terms of Service ("Terms") govern your use of OfficeAIHub ("we," "our," or "us"), a professional AI tool recommendation platform that provides curated reviews, comparisons, and affiliate links to the best AI tools for workplace efficiency.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        By accessing or using OfficeAIHub, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our service.
+                    </p>
+                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                        <p class="text-blue-800 dark:text-blue-200 text-sm">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>Important:</strong> OfficeAIHub operates as an affiliate marketing website. We may earn commissions from AI tool purchases made through our recommendations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Description -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-cogs text-green-600 mr-3"></i>
+                        Description of Service
+                    </h2>
                     
-                    <!-- Agreement to Terms -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Agreement to Terms</h2>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            By accessing this website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            These terms constitute a legal agreement between you and OfficeAIHub. You agree not to misuse the content or functionalities of our website. All product links are external and may be affiliated with commission-based partnerships.
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                        OfficeAIHub provides professional AI tool recommendations to maximize workplace efficiency through:
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Our Services Include:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Curated AI tool reviews and comparisons</li>
+                                <li>• Professional workplace efficiency recommendations</li>
+                                <li>• Best AI writing, design, and marketing tools</li>
+                                <li>• Affiliate links to recommended AI platforms</li>
+                                <li>• Expert guidance for AI tool selection</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Target Audience:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Business professionals and entrepreneurs</li>
+                                <li>• Content creators and digital marketers</li>
+                                <li>• Remote workers and freelancers</li>
+                                <li>• Teams seeking productivity improvements</li>
+                                <li>• AI technology enthusiasts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Affiliate Disclosure & Partnerships -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-link text-orange-600 mr-3"></i>
+                        Affiliate Relationships & Commissions
+                    </h2>
+                    
+                    <div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-6 mb-6">
+                        <h4 class="font-semibold text-orange-800 dark:text-orange-200 mb-3">
+                            <i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>
+                            FTC Compliance Disclosure
+                        </h4>
+                        <p class="text-orange-700 dark:text-orange-300 text-sm">
+                            OfficeAIHub participates in affiliate programs including Impact Radius, CJ Affiliate (Commission Junction), and direct partnerships with AI tool providers. We may receive compensation when you purchase products through our affiliate links.
                         </p>
                     </div>
 
-                    <!-- Use License -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Use License</h2>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Permission is granted to temporarily access and use the materials on OfficeAIHub for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Affiliate Program Participation</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Networks We Work With:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Impact Radius affiliate network</li>
+                                <li>• CJ Affiliate (Commission Junction)</li>
+                                <li>• Direct AI tool company partnerships</li>
+                                <li>• Professional software affiliate programs</li>
+                                <li>• Enterprise AI platform referrals</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Commission Structure:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Percentage-based commissions on sales</li>
+                                <li>• Fixed-rate referral payments</li>
+                                <li>• Recurring subscription commissions</li>
+                                <li>• Performance-based bonus payments</li>
+                                <li>• No additional cost to customers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                        <p class="text-green-800 dark:text-green-200 text-sm">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            <strong>Editorial Independence:</strong> Our affiliate relationships do not influence our honest reviews and recommendations. We only promote AI tools we genuinely believe provide value for workplace efficiency.
                         </p>
-                        
-                        <ul class="text-gray-600 dark:text-gray-300 space-y-2 mb-4">
-                            <li>• Modify or copy the materials without permission</li>
-                            <li>• Use the materials for any commercial purpose or for any public display</li>
-                            <li>• Attempt to reverse engineer any software contained on OfficeAIHub</li>
-                            <li>• Remove any copyright or other proprietary notations from the materials</li>
-                            <li>• Transfer the materials to another person or "mirror" the materials on any other server</li>
+                    </div>
+                </div>
+
+                <!-- User Responsibilities -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-user-check text-purple-600 mr-3"></i>
+                        User Responsibilities & Acceptable Use
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Permitted Use</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        You may use OfficeAIHub for personal and professional research to find the best AI tools for your workplace efficiency needs. Our recommendations are designed to help you make informed decisions about AI tool investments.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Prohibited Activities</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Content Restrictions:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Copying or republishing our AI tool reviews</li>
+                                <li>• Scraping our affiliate links or content</li>
+                                <li>• Creating competing AI tool directories</li>
+                                <li>• Reverse engineering our recommendation algorithms</li>
+                                <li>• Impersonating OfficeAIHub brand</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Technical Restrictions:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• Using automated tools to access our site</li>
+                                <li>• Attempting to bypass affiliate tracking</li>
+                                <li>• Interfering with site security features</li>
+                                <li>• Distributing malware or viruses</li>
+                                <li>• Overloading our servers with requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intellectual Property -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-copyright text-indigo-600 mr-3"></i>
+                        Intellectual Property Rights
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">OfficeAIHub Content</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        All content on OfficeAIHub, including AI tool reviews, comparisons, recommendations, design elements, and the OfficeAIHub brand, is owned by us and protected by copyright, trademark, and other intellectual property laws.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Third-Party AI Tools</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        AI tool names, logos, and product descriptions mentioned on OfficeAIHub are the property of their respective owners. We use these for informational and review purposes only.
+                    </p>
+
+                    <div class="bg-gray-50 dark:bg-gray-900/50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Fair Use Guidelines:</h4>
+                        <ul class="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                            <li>• You may share links to our AI tool reviews</li>
+                            <li>• Brief excerpts for commentary are permitted</li>
+                            <li>• Attribution to OfficeAIHub is required</li>
+                            <li>• Commercial use requires written permission</li>
                         </ul>
-                        
-                        <p class="text-gray-600 dark:text-gray-300">
-                            This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+                    </div>
+                </div>
+
+                <!-- Disclaimers & Warranties -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-exclamation-circle text-red-600 mr-3"></i>
+                        Disclaimers & Warranties
+                    </h2>
+                    
+                    <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6 mb-6">
+                        <h4 class="font-semibold text-red-800 dark:text-red-200 mb-3">Important Disclaimer</h4>
+                        <p class="text-red-700 dark:text-red-300 text-sm">
+                            OfficeAIHub provides AI tool recommendations "as is" without warranties. Individual results may vary. We are not responsible for your experience with third-party AI tools, even if purchased through our affiliate links.
                         </p>
                     </div>
 
-                    <!-- Disclaimer -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Disclaimer</h2>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            The materials on OfficeAIHub are provided on an 'as is' basis. OfficeAIHub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-                        </p>
-                        
-                        <p class="text-gray-600 dark:text-gray-300">
-                            Further, OfficeAIHub does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
-                        </p>
-                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">No Professional Advice</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Our AI tool recommendations are for informational purposes only and do not constitute professional, legal, or financial advice. Always conduct your own research before purchasing any AI software or tools.
+                    </p>
 
-                    <!-- External Links and Affiliates -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">External Links and Affiliate Relationships</h2>
-                        
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Third-Party Links</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            OfficeAIHub contains links to external websites and AI tools that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
-                        </p>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Third-Party AI Tool Performance</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        We cannot guarantee the performance, availability, or continued operation of any recommended AI tools. Prices, features, and terms may change without notice.
+                    </p>
 
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Affiliate Disclosure</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Some links on our website are affiliate links, meaning we may earn a commission if you click through and make a purchase. This does not affect the price you pay, and we only recommend tools we genuinely believe are valuable.
-                        </p>
-
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">No Endorsement</h3>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            The inclusion of any link does not imply endorsement by OfficeAIHub of the site or any association with its operators. You acknowledge and agree that we shall not be responsible or liable for any loss or damage caused by use of any such content, goods, or services available on such websites.
-                        </p>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Information</h2>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            If you have any questions about these Terms of Service, please contact us:
-                        </p>
-                        
-                        <div class="space-y-2 text-gray-600 dark:text-gray-300">
-                            <p><strong>Email:</strong> officeaihub@gmail.com</p>
-                            <p><strong>Website:</strong> <a href="./" class="text-blue-600 hover:text-blue-700">OfficeAIHub</a></p>
-                            <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Service Availability:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• OfficeAIHub may be temporarily unavailable</li>
+                                <li>• We reserve the right to modify or discontinue features</li>
+                                <li>• Affiliate links may become inactive</li>
+                                <li>• AI tool recommendations may be updated</li>
+                            </ul>
                         </div>
-                        
-                        <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-                            <p class="text-yellow-800 dark:text-yellow-200 text-sm">
-                                <strong>Important:</strong> By using OfficeAIHub, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.
-                            </p>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Content Accuracy:</h4>
+                            <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>• AI tool information updated regularly</li>
+                                <li>• Prices and features subject to change</li>
+                                <li>• User reviews reflect individual experiences</li>
+                                <li>• We strive for accuracy but cannot guarantee it</li>
+                            </ul>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Limitation of Liability -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-shield-alt text-yellow-600 mr-3"></i>
+                        Limitation of Liability
+                    </h2>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                        To the maximum extent permitted by law, OfficeAIHub shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages resulting from your use of our AI tool recommendations or affiliate partnerships.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Specific Limitations</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">AI Tool Performance</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">We are not responsible for the performance, functionality, or results achieved with any AI tools purchased through our affiliate links.</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Financial Losses</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">We are not liable for any financial losses, lost productivity, or business interruption resulting from AI tool purchases or implementations.</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Data Security</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">We cannot guarantee the security or privacy practices of third-party AI tools, even those we recommend.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modifications & Termination -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-edit text-teal-600 mr-3"></i>
+                        Modifications & Termination
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Terms Updates</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We reserve the right to modify these Terms of Service at any time to reflect changes in our AI tool recommendation services, affiliate partnerships, or legal requirements. Material changes will be prominently posted on our website.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Service Termination</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        We may terminate or suspend access to OfficeAIHub immediately, without prior notice, for violations of these Terms or for any other reason at our sole discretion.
+                    </p>
+
+                    <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-4">
+                        <p class="text-teal-800 dark:text-teal-200 text-sm">
+                            <i class="fas fa-bell mr-2"></i>
+                            <strong>Notification:</strong> We will provide reasonable notice of material changes to our Terms, typically 30 days before they take effect.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Governing Law -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-8 mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-gavel text-gray-600 mr-3"></i>
+                        Governing Law & Dispute Resolution
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Applicable Law</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        These Terms of Service are governed by and construed in accordance with applicable laws. Any disputes arising from your use of OfficeAIHub or our AI tool recommendations shall be resolved through binding arbitration.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Dispute Resolution Process</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm font-medium">1</span>
+                            <p class="text-gray-600 dark:text-gray-300">Contact us directly at officeaihub@gmail.com to resolve any issues</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm font-medium">2</span>
+                            <p class="text-gray-600 dark:text-gray-300">Allow 30 days for good faith negotiation and resolution</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-sm font-medium">3</span>
+                            <p class="text-gray-600 dark:text-gray-300">If unresolved, disputes proceed to binding arbitration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                        Questions About These Terms?
+                    </h2>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+                        If you have any questions about these Terms of Service, our affiliate partnerships, or our AI tool recommendations, please contact us:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">
+                                <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                                Email Support
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300">officeaihub@gmail.com</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Response within 24-48 hours</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">
+                                <i class="fas fa-globe text-green-600 mr-2"></i>
+                                Website
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300">www.officeaihub.com</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Professional AI tool directory</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">
+                                <i class="fas fa-handshake text-purple-600 mr-2"></i>
+                                Partnerships
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300">Affiliate inquiries welcome</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Impact, CJ Affiliate partners</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                        <p class="text-sm text-blue-800 dark:text-blue-200">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            <strong>Need AI Tool Recommendations?</strong> Contact us for personalized suggestions based on your specific workplace efficiency needs and budget.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -229,7 +488,7 @@
                         </svg>
                         <h3 class="text-xl font-bold">OfficeAIHub</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Discover the most powerful AI tools to enhance your workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task.</p>
+                    <p class="text-gray-400 mb-4">Best professional AI tools for maximum workplace efficiency. From writing and design to marketing and automation, find the perfect AI solution for every task in 2025.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
                             <i class="fab fa-twitter text-xl"></i>
@@ -243,26 +502,26 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <h4 class="text-lg font-semibold mb-4">AI Tool Categories</h4>
                     <ul class="space-y-2">
-                        <li><a href="./#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
-                        <li><a href="./#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
-                        <li><a href="./#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
-                        <li><a href="./#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
+                        <li><a href="index.html#writing" class="text-gray-400 hover:text-white transition-colors">Writing Tools</a></li>
+                        <li><a href="index.html#design" class="text-gray-400 hover:text-white transition-colors">Design Tools</a></li>
+                        <li><a href="index.html#marketing" class="text-gray-400 hover:text-white transition-colors">Marketing Tools</a></li>
+                        <li><a href="index.html#office" class="text-gray-400 hover:text-white transition-colors">Office Automation</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Pages</h4>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                        <li><a href="terms.html" class="text-blue-400 font-medium">Terms of Service</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 OfficeAIHub. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 OfficeAIHub. All rights reserved. Best professional AI tools for maximum workplace efficiency.</p>
             </div>
         </div>
     </footer>
